@@ -6,10 +6,11 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
+	base: "/smes-1",
 	vite: {
 		plugins: [tailwindcss()],
 	},
 	integrations: [icon(), sitemap()],
 
-	site: "https://www.example.com",
+	site: "https://smes-template-one.vercel.app",
 });
