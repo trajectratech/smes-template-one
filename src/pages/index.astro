@@ -145,7 +145,6 @@ const organizationSchema = {
 	logo: data.brand.logoImage,
 	sameAs: sameAsUrls,
 };
-const smesVersion = "smes-1";
 ---
 
 <html
@@ -169,34 +168,20 @@ const smesVersion = "smes-1";
 		<link rel="canonical" href={data.brand.url} />
 		<link rel="alternate" hreflang="en" href={data.brand.url} />
 		<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-		<link
-			rel="apple-touch-icon"
-			sizes="180x180"
-			href={smesVersion + "/apple-touch-icon.png"}
-		/>
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 		<link
 			rel="icon"
 			type="image/png"
-			sizes="32x32"
-			href={smesVersion + "/favicon-32x32.png"}
+			sizes="16x16"
+			href="/android-chrome-192x192.png"
 		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="16x16"
-			href={smesVersion + "/favicon-16x16.png"}
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href={smesVersion + "/android-chrome-192x192.png"}
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href={smesVersion + "/android-chrome-512x512.png"}
+			href="/android-chrome-512x512.png"
 		/>
 
 		<!-- Open Graph -->
@@ -223,7 +208,7 @@ const smesVersion = "smes-1";
 		<meta name="pinterest:description" content={data.brand.description} />
 
 		<!-- Favicon and Preload -->
-		<link rel="icon" href="/smes/favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
 		<link
 			rel="preload"

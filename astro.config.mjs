@@ -6,7 +6,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-	base: "/smes-1",
 	vite: {
 		plugins: [tailwindcss()],
 	},
