@@ -1,7 +1,7 @@
 ---
 import type { ThemeConfig, SectionKey } from "../types/theme";
-import dataJson from "../data/theme.json";
-// import dataJson from "../data/pure-glow.json";
+import mainJson from "../data/theme.json";
+import pureJson from "../data/pure-glow.json";
 
 import About from "../components/About.astro";
 import Hero from "../components/Hero.astro";
@@ -16,7 +16,9 @@ import FontLoader from "../components/FontLoader.astro";
 
 import "../styles/global.css";
 
-const data = dataJson as ThemeConfig;
+const json = [mainJson, pureJson];
+
+const data = json[0] as ThemeConfig;
 const layout: SectionKey[] = data.layout.sectionOrder;
 
 const colorVars = {

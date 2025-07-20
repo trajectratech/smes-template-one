@@ -11,5 +11,5 @@ export default defineConfig({
 	},
 	integrations: [icon(), sitemap()],
 
-	site: "https://smes-template-one.vercel.app",
+	site: "https://smes-1.trajectra.com",
 });
