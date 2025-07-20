@@ -42,23 +42,6 @@ export const availableFonts: Record<string, number[]> = {
 	"Titillium Web": [200, 300, 400, 600, 700, 900],
 };
 
-export function loadGoogleFont(fontName: string, weights?: number[]): void {
-	const fallbackWeights = availableFonts[fontName] || [400];
-	const usedWeights = weights?.length ? weights : fallbackWeights;
-	const fontParam = `${fontName.replace(/\s+/g, "+")}:wght@${usedWeights.join(
-		";",
-	)}`;
-
-	// Avoid loading the same font more than once
-	const existing = document.head.querySelector(`link[href*="${fontParam}"]`);
-	if (existing) return;
-
-	const link = document.createElement("link");
-	link.href = `https://fonts.googleapis.com/css2?family=${fontParam}&display=swap`;
-	link.rel = "stylesheet";
-	document.head.appendChild(link);
-}
-
 export function getFontFamily(font: string): string {
 	const defaultFont = "Inter";
 	return supportedFonts.includes(font) ? font : defaultFont;
