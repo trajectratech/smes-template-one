@@ -1,16 +1,316 @@
 ---
+import type { ThemeConfig, SectionKey } from "../types/theme";
+import dataJson from "../data/theme.json";
+// import dataJson from "../data/pure-glow.json";
 
+import About from "../components/About.astro";
+import Hero from "../components/Hero.astro";
+import Navbar from "../components/Navbar.astro";
+import Pricing from "../components/Pricing.astro";
+import Services from "../components/Services.astro";
+import Testimonials from "../components/Testimonials.astro";
+import Gallery from "../components/Gallery.astro";
+import Map from "../components/Map.astro";
+import Footer from "../components/Footer.astro";
+import FontLoader from "../components/FontLoader.astro";
+
+import "../styles/global.css";
+
+const data = dataJson as ThemeConfig;
+const layout: SectionKey[] = data.layout.sectionOrder;
+
+const colorVars = {
+	"--color-primary": data.colors.primary,
+	"--color-secondary": data.colors.secondary,
+	"--color-accent": data.colors.accent,
+	"--color-background": data.colors.background,
+	"--color-text": data.colors.text,
+	"--color-heading": data.colors.heading,
+	"--color-link": data.colors.link,
+	"--color-hover": data.colors.hover,
+	"--color-active": data.colors.active,
+	"--color-error": data.colors.error,
+	"--color-success": data.colors.success,
+	"--color-muted": data.colors.muted,
+};
+
+// Section map using component references
+const sectionMap: Record<SectionKey, any> = {
+	hero: Hero,
+	about: About,
+	services: Services,
+	pricing: Pricing,
+	testimonials: Testimonials,
+	gallery: Gallery,
+	contact: Map,
+};
+
+const sameAsUrls = data.socialMedia?.map((sm) => sm.url) ?? [];
+
+if (data?.googleBusinessProfileLink) {
+	sameAsUrls.push(data.googleBusinessProfileLink);
+}
+
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "LocalBusiness",
+	name: data.brand.businessName,
+	description: data.brand.description,
+	"@id": `${data.brand.url}#localbusiness`,
+	url: data.brand.url,
+	logo: data.brand.logoImage,
+	image: data.imagery?.heroImage || data.brand.logoImage,
+	telephone: data.contact.phone,
+	address: {
+		"@type": "PostalAddress",
+		streetAddress: data.contact.address,
+		addressLocality: data.contact.addressLocality,
+		addressRegion: data.contact.addressRegion,
+		addressCountry: data.contact.addressCountry,
+	},
+	contactPoint: {
+		"@type": "ContactPoint",
+		telephone: data.contact.phone,
+		contactType: "customer support",
+		email: data.contact.email,
+	},
+	...(data.contact.geoData?.latitude &&
+		data.contact.geoData?.longitude && {
+			geo: {
+				"@type": "GeoCoordinates",
+				latitude: data.contact.geoData.latitude,
+				longitude: data.contact.geoData.longitude,
+			},
+		}),
+	areaServed: {
+		"@type": "Place",
+		address: {
+			"@type": "PostalAddress",
+			addressRegion: data.contact.addressRegion,
+			addressCountry: data.contact.addressCountry,
+		},
+	},
+	sameAs: sameAsUrls,
+	priceRange: "₦₦",
+	openingHours: "Mo-Su 08:00-20:00",
+};
+
+const webPageSchema = {
+	"@context": "https://schema.org",
+	"@type": "WebPage",
+	name: data.brand.title,
+	url: data.brand.url,
+	description: data.brand.description,
+};
+
+// Structured Data: BreadcrumbList
+const breadcrumbSchema = {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	itemListElement: [
+		{
+			"@type": "ListItem",
+			position: 1,
+			name: "Home",
+			item: data.brand.url,
+		},
+	],
+};
+
+// Structured Data: AggregateRating (if testimonials exist)
+const testimonials = data.content?.testimonialsSection?.testimonials;
+
+const ratingSchema =
+	Array.isArray(testimonials) && testimonials.length
+		? {
+				"@context": "https://schema.org",
+				"@type": "AggregateRating",
+				ratingValue: (
+					testimonials.reduce((sum, t) => sum + (t.rating || 0), 0) /
+					testimonials.length
+				).toFixed(1), // One decimal place
+				reviewCount: testimonials.length,
+				itemReviewed: {
+					"@type": "LocalBusiness",
+					name: data.brand.businessName,
+				},
+			}
+		: null;
+
+const organizationSchema = {
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	name: data.brand.businessName,
+	url: data.brand.url,
+	logo: data.brand.logoImage,
+	sameAs: sameAsUrls,
+};
 ---
 
-<html lang="en">
+<html
+	lang="en"
+	style={Object.entries(colorVars)
+		.map(([k, v]) => `${k}: ${v}`)
+		.join("; ")}
+>
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<FontLoader fontFamily={data.typography?.fontFamily || ""} />
+
+		<title>{data.brand.title}</title>
+		<meta name="description" content={data.brand.description} />
+		<meta name="keywords" content={data.brand.keywords.join(", ")} />
+		<meta name="theme-color" content={data.colors.primary} />
+		<meta name="author" content="{data.brand.businessName}" />
+		<!-- <meta name="google-site-verification" content="abc123XYZ..." /> -->
+		<link rel="canonical" href={data.brand.url} />
+		<link rel="alternate" hreflang="en" href={data.brand.url} />
+		<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/android-chrome-192x192.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/android-chrome-512x512.png"
+		/>
+
+		<!-- Open Graph -->
+		<meta property="og:title" content={data.brand.title} />
+		<meta property="og:description" content={data.brand.description} />
+		<meta
+			property="og:image"
+			content={data.imagery?.heroImage || data.brand.logoImage}
+		/>
+		<meta property="og:url" content={data.brand.url} />
+		<meta property="og:site_name" content={data.brand.businessName} />
+		<meta property="og:locale" content="en_US" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={data.brand.businessName} />
+		<meta name="twitter:description" content={data.brand.description} />
+		<meta
+			name="twitter:image"
+			content={data.imagery?.heroImage || data.brand.logoImage}
+		/>
+
+		<!-- Pinterest -->
+		<meta name="pinterest:description" content={data.brand.description} />
+
+		<!-- Favicon and Preload -->
+		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+		<link
+			rel="preload"
+			href={data.imagery?.heroImage || data.brand.logoImage}
+			as="image"
+		/>
+
+		<!-- Index -->
+		<meta name="robots" content="index, follow" />
+
+		<!-- Structured Data: Local Business -->
+		<script
+			type="application/ld+json"
+			set:html={JSON.stringify(structuredData)}
+		/>
+		<script
+			type="application/ld+json"
+			set:html={JSON.stringify(webPageSchema)}
+		/>
+
+		{
+			breadcrumbSchema && (
+				<script
+					type="application/ld+json"
+					set:html={JSON.stringify(breadcrumbSchema)}
+				/>
+			)
+		}
+
+		{
+			ratingSchema && (
+				<script
+					type="application/ld+json"
+					set:html={JSON.stringify(ratingSchema)}
+				/>
+			)
+		}
+		<script
+			type="application/ld+json"
+			set:html={JSON.stringify(organizationSchema)}
+		/>
 	</head>
-	<body>
-		<h1>Astro</h1>
+
+	<body class="bg-background text-text font-sans leading-relaxed scroll-smooth">
+		<Navbar data={data} mobileNavVariant="slide-down" />
+
+		{
+			layout.map((section) => {
+				const Component = sectionMap[section];
+
+				if (!Component) return null;
+
+				// Conditional checks for dynamic sections
+				if (
+					section === "pricing" &&
+					(!Array.isArray(data.pricing) || data.pricing.length === 0)
+				)
+					return null;
+				if (
+					section === "testimonials" &&
+					!data?.content?.testimonialsSection?.testimonials?.length
+				)
+					return null;
+				if (section === "gallery" && !data?.imagery?.gallery?.length)
+					return null;
+				if (section === "contact" && !data?.map?.embedUrl) return null;
+
+				return (
+					<section aria-labelledby={`${section}-heading`}>
+						<Component data={data} />
+					</section>
+				);
+			})
+		}
+
+		<Footer data={data} />
+		<!-- Back to Top Button -->
+
+		<button
+			id="back-to-top"
+			class="cursor-pointer fixed bottom-6 right-6 z-50 px-5 py-2 rounded-full bg-[var(--color-primary)] text-[var(--color-background)] shadow-xl hover:shadow-2xl transition-all duration-300 opacity-0 pointer-events-none glow"
+			aria-label="Back to top"
+		>
+			⬆ Back to Top
+		</button>
+
+		<script is:inline>
+			const backToTopBtn = document.getElementById("back-to-top");
+
+			window.addEventListener("scroll", () => {
+				if (window.scrollY > 300) {
+					backToTopBtn.classList.add("opacity-100", "pointer-events-auto");
+					backToTopBtn.classList.remove("opacity-0", "pointer-events-none");
+				} else {
+					backToTopBtn.classList.add("opacity-0", "pointer-events-none");
+					backToTopBtn.classList.remove("opacity-100", "pointer-events-auto");
+				}
+			});
+
+			backToTopBtn.addEventListener("click", () => {
+				window.scrollTo({ top: 0, behavior: "smooth" });
+			});
+		</script>
 	</body>
 </html>

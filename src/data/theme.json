@@ -1,0 +1,243 @@
+{
+	"brand": {
+		"title": "TrackSure - Fleet Management, GPS, Vehicle Tracking and Security ",
+		"businessName": "TrackSure",
+		"tagline": "Real-time vehicle tracking and fleet security",
+		"description": "Real-time vehicle tracking and fleet security",
+		"logoImage": "/logo/tracksure.webp",
+		"url": "https://www.trajectra.com",
+		"keywords": [
+			"vehicle tracking",
+			"GPS",
+			"fleet management",
+			"security",
+			"TrackSure"
+		]
+	},
+	"colors": {
+		"primary": "#0F172A",
+		"secondary": "#3B82F6",
+		"accent": "#1E40AF",
+		"background": "#F9FAFB",
+		"text": "#111827",
+		"heading": "#0F172A",
+		"link": "#1D4ED8",
+		"hover": "#2563EB",
+		"active": "#1E3A8A",
+		"error": "#e74c3c",
+		"success": "#10B981",
+		"muted": "#D1D5DB"
+	},
+	"typography": {
+		"fontFamily": "Ubuntu",
+		"fontSizes": {
+			"h1": "36px",
+			"h2": "30px",
+			"h3": "24px",
+			"paragraph": "16px",
+			"caption": "14px"
+		},
+		"fontStyles": {
+			"bold": "bold",
+			"italic": "italic",
+			"underline": "underline"
+		},
+		"fontWeights": {
+			"light": 300,
+			"regular": 400,
+			"medium": 500,
+			"bold": 700,
+			"black": 900
+		}
+	},
+	"imagery": {
+		"backgroundImage": "",
+		"logoImage": "/logo/tracksure.png",
+		"heroImage": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1283&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"heroTextColor": "var(--color-background)",
+		"galleryTitle": "On-Site Showcase",
+		"gallery": [
+			{
+				"imageUrl": "https://images.unsplash.com/photo-1634743556192-d19f0c69ff3a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+				"caption": "Tracking dashboard"
+			},
+			{
+				"imageUrl": "https://images.unsplash.com/photo-1699391679400-faff80dd26f5?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+			},
+			{
+				"imageUrl": "https://images.unsplash.com/photo-1590602562997-1234de679f76?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+			},
+			{
+				"imageUrl": "https://images.unsplash.com/photo-1610647752706-3bb12232b3ab?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+			}
+		]
+	},
+	"logo": {
+		"dimensions": {
+			"width": 100,
+			"height": 50
+		},
+		"padding": 10,
+		"margin": 20
+	},
+
+	"googleBusinessProfileLink": "",
+
+	"socialMedia": [
+		{
+			"name": "Instagram",
+			"url": "https://instagram.com/tracksure"
+		},
+		{
+			"name": "Facebook",
+			"url": "https://facebook.com/tracksure"
+		},
+		{
+			"name": "X",
+			"url": "https://x.com/tracksure"
+		},
+		{
+			"name": "Youtube",
+			"url": "https://youtube.com/tracksure"
+		}
+	],
+	"content": {
+		"heroSection": {
+			"heading": "Real-time vehicle tracking and fleet security",
+			"paragraph": "TrackSure helps you monitor and secure your vehicles with ease.",
+			"ctaText": "Request a Demo",
+			"ctaUrl": "https://tracksure.com/request-demo"
+		},
+		"aboutSection": {
+			"heading": "About TrackSure",
+			"paragraph": "TrackSure provides reliable GPS vehicle tracking, fleet management, and 24/7 monitoring solutions to improve safety and efficiency.",
+			"imageUrl": "https://images.unsplash.com/photo-1699391679400-faff80dd26f5?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+		},
+		"servicesSection": {
+			"heading": "Our Services",
+			"paragraph": "Explore our comprehensive solutions for fleet and vehicle management.",
+			"listItems": [
+				{ "title": "GPS Vehicle Tracking", "description": "" },
+				{ "title": "Fleet Management", "description": "" },
+				{ "title": "Real-time Alerts & Reports", "description": "" },
+				{ "title": "Geofencing", "description": "" },
+				{ "title": "24/7 Monitoring", "description": "" }
+			]
+		},
+		"testimonialsSection": {
+			"heading": "What Our Cleints Say",
+			"testimonials": [
+				{
+					"name": "Adewale O.",
+					"position": "Fleet Manager, Lagos Haulage Co.",
+					"comment": "TrackSure helped us reduce vehicle theft and improve route planning. Highly recommended!",
+					"rating": 5,
+					"avatarUrl": ""
+				},
+				{
+					"name": "Ngozi K.",
+					"position": "Business Owner",
+					"comment": "I can now monitor all my delivery vehicles from my phone. It's reliable and efficient.",
+					"rating": 4,
+					"avatarUrl": ""
+				}
+			]
+		}
+	},
+	"pricing": [
+		{
+			"plan": "Basic Plan",
+			"price": "₦10,000/month",
+			"features": ["Real-time GPS tracking", "1 Vehicle", "SMS Alerts"]
+		},
+		{
+			"plan": "Pro Plan",
+			"price": "₦25,000/month",
+			"features": [
+				"Fleet Management (Up to 5 vehicles)",
+				"Geofencing",
+				"Email + SMS Alerts",
+				"Reports Dashboard"
+			]
+		},
+		{
+			"plan": "Enterprise Plan",
+			"price": "Custom Pricing",
+			"features": [
+				"Unlimited Vehicles",
+				"API Access",
+				"Priority Support",
+				"Custom Integrations"
+			]
+		}
+	],
+	"map": {
+		"embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252168.8803518341!2d7.204291786718748!3d9.051105600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b36c37f0a37%3A0xc006d8db832580ea!2sCentral%20Bank%20of%20Nigeria!5e0!3m2!1sen!2sng!4v1752843098143!5m2!1sen!2sng"
+	},
+	"contact": {
+		"email": "support@tracksure.com",
+		"phone": "+2347066120776",
+		"whatsapp": "+2347066120776",
+		"address": "Abuja, Nigeria",
+		"addressLocality": "Abuja",
+		"addressRegion": "Abuja",
+		"addressCountry": "NG",
+		"geoData": {
+			"latitude": 9.051106,
+			"longitude": 7.204292
+		}
+	},
+	"layout": {
+		"sectionOrder": [
+			"hero",
+			"about",
+			"gallery",
+			"services",
+			"pricing",
+			"testimonials",
+			"contact"
+		],
+		"sectionPadding": 50,
+		"containerWidth": 1200,
+		"containerPadding": 20
+	},
+	"interactions": {
+		"animationStyles": {
+			"fade": "fadeIn 1s ease-in-out"
+		},
+		"transitionEffects": {
+			"hover": "background-color 0.3s ease-in-out, color 0.3s ease-in-out"
+		}
+	},
+	"components": {
+		"buttonStyles": {
+			"backgroundColor": "#0F172A",
+			"textColor": "#ffffff",
+			"padding": 12,
+			"borderRadius": 6
+		},
+		"formStyles": {
+			"inputFieldStyles": {
+				"padding": 10,
+				"border": "1px solid #D1D5DB",
+				"borderRadius": 4
+			}
+		}
+	},
+	"responsiveness": {
+		"breakpoints": {
+			"desktop": 1200,
+			"tablet": 768,
+			"mobile": 480
+		}
+	},
+	"settings": {
+		"darkMode": true,
+		"showBooking": true,
+		"showPricing": true
+	},
+	"poweredBy": {
+		"title": "Trajectra Technologies",
+		"url": "https://www.trajectra.com"
+	}
+}

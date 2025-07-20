@@ -1,0 +1,222 @@
+{
+	"brand": {
+		"title": "PureGlow - Natural & Organic Skincare Solutions",
+		"businessName": "PureGlow",
+		"tagline": "Nourish your skin with nature's best",
+		"description": "PureGlow offers organic skincare products made from natural ingredients to revitalize your skin.",
+		"logoImage": "/logo/tracksure.webp",
+		"url": "https://www.pureglowskin.com",
+		"keywords": [
+			"organic skincare",
+			"natural beauty",
+			"skin health",
+			"cruelty-free",
+			"PureGlow"
+		]
+	},
+	"colors": {
+		"primary": "#2C5F2D",
+		"secondary": "#97BC62",
+		"accent": "#F4F1DE",
+		"background": "#FFFFFF",
+		"text": "#333333",
+		"heading": "#2C5F2D",
+		"link": "#4A7C59",
+		"hover": "#6B8F71",
+		"active": "#255725",
+		"error": "#E63946",
+		"success": "#6AB547",
+		"muted": "#A7C4A0"
+	},
+	"typography": {
+		"fontFamily": "Merriweather",
+		"fontSizes": {
+			"h1": "34px",
+			"h2": "28px",
+			"h3": "22px",
+			"paragraph": "16px",
+			"caption": "14px"
+		},
+		"fontStyles": {
+			"bold": "700",
+			"italic": "italic",
+			"underline": "underline"
+		},
+		"fontWeights": {
+			"light": 300,
+			"regular": 400,
+			"medium": 600,
+			"bold": 700,
+			"black": 900
+		}
+	},
+	"imagery": {
+		"backgroundImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80",
+		"logoImage": "/logo/pureglow.png",
+		"heroImage": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1280&q=80",
+		"heroTextColor": "var(--color-text)",
+		"galleryTitle": "Our Natural Ingredients",
+		"gallery": [
+			{
+				"imageUrl": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=60",
+				"caption": "Fresh botanicals"
+			},
+			{
+				"imageUrl": "https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=800&q=60"
+			},
+			{
+				"imageUrl": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=60"
+			}
+		]
+	},
+	"logo": {
+		"dimensions": {
+			"width": 120,
+			"height": 60
+		},
+		"padding": 15,
+		"margin": 10
+	},
+	"googleBusinessProfileLink": "https://g.page/pureglowskincare",
+	"socialMedia": [
+		{
+			"name": "Instagram",
+			"url": "https://instagram.com/pureglowskincare"
+		},
+		{
+			"name": "Facebook",
+			"url": "https://facebook.com/pureglowskincare"
+		},
+		{
+			"name": "Pinterest",
+			"url": "https://pinterest.com/pureglowskincare"
+		},
+		{
+			"name": "Youtube",
+			"url": "https://youtube.com/pureglowskincare"
+		}
+	],
+	"content": {
+		"heroSection": {
+			"heading": "Nature’s Touch for Healthy, Glowing Skin",
+			"paragraph": "Discover the power of organic ingredients with PureGlow’s skincare range designed for every skin type.",
+			"ctaText": "Shop Now",
+			"ctaUrl": "https://www.pureglowskin.com/shop"
+		},
+		"aboutSection": {
+			"heading": "About PureGlow",
+			"paragraph": "PureGlow is committed to using ethically sourced natural ingredients that nurture your skin and the planet.",
+			"imageUrl": "https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=800&q=80"
+		},
+		"servicesSection": {
+			"heading": "Our Products",
+			"paragraph": "Explore our natural skincare essentials crafted to enhance your beauty naturally.",
+			"listItems": [
+				{
+					"title": "Organic Face Cream",
+					"description": "Hydrate and nourish with our gentle cream."
+				},
+				{
+					"title": "Herbal Cleanser",
+					"description": "Cleanse deeply without harsh chemicals."
+				},
+				{
+					"title": "Natural Face Masks",
+					"description": "Revitalize your skin with natural botanicals."
+				},
+				{
+					"title": "Essential Oils",
+					"description": "Relax and rejuvenate your senses."
+				}
+			]
+		},
+		"testimonialsSection": {
+			"heading": "What Our Customers Say",
+			"testimonials": [
+				{
+					"name": "Emily R.",
+					"position": "Satisfied Customer",
+					"comment": "My skin feels so much healthier and radiant after switching to PureGlow!",
+					"rating": 5,
+					"avatarUrl": ""
+				},
+				{
+					"name": "James K.",
+					"position": "Long-time User",
+					"comment": "I love how natural and effective these products are. Highly recommend!",
+					"rating": 4,
+					"avatarUrl": ""
+				}
+			]
+		}
+	},
+	"pricing": [],
+	"map": {
+		"embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.7906268451723!2d-122.41941528469207!3d37.77492977975921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c05a9a2db%3A0x87a0c2a02e5d4b30!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1612372880301!5m2!1sen!2sus"
+	},
+	"contact": {
+		"email": "contact@pureglowskin.com",
+		"phone": "+1-415-555-0123",
+		"whatsapp": "+1-415-555-0123",
+		"address": "123 Green St, San Francisco, CA",
+		"addressLocality": "San Francisco",
+		"addressRegion": "CA",
+		"addressCountry": "US",
+		"geoData": {
+			"latitude": 37.7749,
+			"longitude": -122.4194
+		}
+	},
+	"layout": {
+		"sectionOrder": [
+			"hero",
+			"about",
+			"gallery",
+			"services",
+			"testimonials",
+			"contact"
+		],
+		"sectionPadding": 40,
+		"containerWidth": 1100,
+		"containerPadding": 15
+	},
+	"interactions": {
+		"animationStyles": {
+			"fade": "fadeIn 1.2s ease-in-out"
+		},
+		"transitionEffects": {
+			"hover": "background-color 0.4s ease-in-out, color 0.4s ease-in-out"
+		}
+	},
+	"components": {
+		"buttonStyles": {
+			"backgroundColor": "#2C5F2D",
+			"textColor": "#FFFFFF",
+			"padding": 14,
+			"borderRadius": 8
+		},
+		"formStyles": {
+			"inputFieldStyles": {
+				"padding": 12,
+				"border": "1px solid #A7C4A0",
+				"borderRadius": 6
+			}
+		}
+	},
+	"responsiveness": {
+		"breakpoints": {
+			"desktop": 1200,
+			"tablet": 768,
+			"mobile": 480
+		}
+	},
+	"settings": {
+		"darkMode": false,
+		"showBooking": false,
+		"showPricing": false
+	},
+	"poweredBy": {
+		"title": "Trajectra Technologies",
+		"url": "https://www.trajectra.com"
+	}
+}

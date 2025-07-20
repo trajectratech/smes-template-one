@@ -1,0 +1,114 @@
+{
+	"colors": {
+		"primary": "     ",
+		"secondary": "#f1c40f",
+		"accent": " ",
+		"background": "f9f9f9",
+		"text": "    ",
+		"heading": "#444444",
+		"link": "",
+		"hover": "#2980b9",
+		"active": "",
+		"error": "#e74c3c",
+		"success": ""
+	},
+	"typography": {
+		"fontFamily": "Open Sans",
+		"fontSizes": {
+			"h1": "36px",
+			"h2": "24px",
+			"h3": "18px",
+			"paragraph": "16px",
+			"caption": "14px"
+		},
+		"fontStyles": {
+			"bold": "bold",
+			"italic": "italic",
+			"underline": "underline"
+		},
+		"fontWeights": {
+			"light": 300,
+			"regular": 400,
+			"medium": 500,
+			"bold": 700,
+			"black": 900
+		}
+	},
+	"imagery": {
+		"backgroundImage": "https://example.com/background.jpg",
+		"heroImage": "https:",
+		"logoImage": "https://example.com/logo.png"
+	},
+	"logo": {
+		"dimensions": {
+			"width": 100,
+			"height": 50
+		},
+		"padding": 10,
+		"margin": 20
+	},
+	"icons": {
+		"socialMedia": [
+			{
+				"name": "Facebook",
+				"url": "https:            "
+			},
+			{
+				"name": "Twitter",
+				"url": "https://twitter.com/example"
+			}
+		]
+	},
+	"content": {
+		"heroSection": {
+			"heading": "Welcome to our website",
+			"paragraph": "This is a sample website",
+			"ctaText": "Learn more",
+			"ctaUrl": "/about"
+		},
+		"aboutSection": {
+			"heading": "About us",
+			"paragraph": "We are a team of developers"
+		},
+		"servicesSection": {
+			"heading": "Our services",
+			"paragraph": "We offer web development services",
+			"listItems": ["Web design", "Web development", "Web maintenance"]
+		}
+	},
+	"layout": {
+		"sectionOrder": ["hero", "about", "services", "contact"],
+		"sectionPadding": 50,
+		"containerWidth": 1200,
+		"containerPadding": 20
+	},
+	"interactions": {
+		"animationStyles": {
+			"fade": "fadeIn 1s ease-in-out"
+		},
+		"transitionEffects": {
+			"hover": "background-color 0.3s ease-in-out"
+		}
+	},
+	"components": {
+		"buttonStyles": {
+			"backgroundColor": " ",
+			"textColor": "#ffffff",
+			"padding": 10,
+			"borderRadius": 5
+		},
+		"formStyles": {
+			"inputFieldStyles": {
+				"padding": 10,
+				"border": "1px solid"
+			}
+		}
+	},
+	"responsiveness": {
+		"breakpoints": {
+			"desktop": 1200,
+			"tablet": 768,
+			"mobile": 480
+		}
+	}
+}
