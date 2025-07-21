@@ -1,9 +1,9 @@
 import {
 	createSignal,
 	createEffect,
-	onCleanup,
 	Show,
 	For,
+	on,
 	type Component,
 } from "solid-js";
 import type { Product } from "../types/product";
@@ -17,6 +17,7 @@ interface ModalProps {
 const ProductModal: Component<ModalProps> = ({ product, isOpen, onClose }) => {
 	const [mainImage, setMainImage] = createSignal(product.imageUrl);
 	const [visible, setVisible] = createSignal(false);
+	let modalRef: HTMLDivElement | undefined;
 
 	const images = product.images
 		? [product.imageUrl, ...product.images]
@@ -26,31 +27,70 @@ const ProductModal: Component<ModalProps> = ({ product, isOpen, onClose }) => {
 	createEffect(() => {
 		if (isOpen) {
 			const backToTopBtn = document.getElementById("back-to-top");
-
-			if (backToTopBtn) {
-				backToTopBtn.style.display = "none";
-			}
+			if (backToTopBtn) backToTopBtn.style.display = "none";
 			document.body.classList.add("overflow-hidden");
-			setVisible(true); // trigger fade-in
+			setVisible(true);
+			setTimeout(() => modalRef?.focus(), 10); // focus modal
 		} else {
-			setVisible(false); // start fade-out
+			setVisible(false);
 			setTimeout(() => {
 				document.body.classList.remove("overflow-hidden");
-			}, 300); // wait for animation to finish
+			}, 300);
 		}
 	});
 
-	// Close with animation delay
+	// Handle ESC key to close
+	const handleKeyDown = (e: KeyboardEvent) => {
+		if (e.key === "Escape") handleClose();
+	};
+
+	// Focus trap (loop focus within modal)
+	const trapFocus = (e: KeyboardEvent) => {
+		if (!modalRef) return;
+		const focusable = modalRef.querySelectorAll<HTMLElement>(
+			'a[href], button, textarea, input, select, [tabindex]:not([tabindex="-1"])',
+		);
+		const first = focusable[0];
+		const last = focusable[focusable.length - 1];
+		if (e.key === "Tab") {
+			if (e.shiftKey) {
+				if (document.activeElement === first) {
+					e.preventDefault();
+					last.focus();
+				}
+			} else {
+				if (document.activeElement === last) {
+					e.preventDefault();
+					first.focus();
+				}
+			}
+		}
+	};
+
+	// Attach key handlers only when open
+	createEffect(
+		on(
+			() => isOpen,
+			(open) => {
+				if (open) {
+					window.addEventListener("keydown", handleKeyDown);
+					window.addEventListener("keydown", trapFocus);
+				} else {
+					window.removeEventListener("keydown", handleKeyDown);
+					window.removeEventListener("keydown", trapFocus);
+				}
+			},
+		),
+	);
+
 	const handleClose = () => {
 		setVisible(false);
 		const backToTopBtn = document.getElementById("back-to-top");
-		if (backToTopBtn) {
-			backToTopBtn.style.display = "block";
-		}
+		if (backToTopBtn) backToTopBtn.style.display = "block";
 		document.body.classList.remove("overflow-hidden");
 		setTimeout(() => {
 			onClose();
-		}, 300); // Match transition duration
+		}, 300);
 	};
 
 	return (
@@ -61,14 +101,20 @@ const ProductModal: Component<ModalProps> = ({ product, isOpen, onClose }) => {
 				}`}
 			>
 				<div
+					ref={modalRef}
+					tabindex="-1"
+					role="dialog"
+					aria-modal="true"
+					aria-labelledby="modal-title"
+					aria-describedby="modal-desc"
 					class={`relative w-full max-w-4xl max-h-screen overflow-y-auto rounded-xl bg-[var(--color-background)] shadow-xl transform transition-all duration-300 ${
 						visible() ? "scale-100" : "scale-95"
-					} p-4`}
+					} p-4 outline-none`}
 				>
 					{/* Close Button */}
 					<button
 						class="absolute top-3 right-4 text-xl font-bold text-[var(--color-primary)] hover:opacity-80 cursor-pointer"
-						aria-label="Close"
+						aria-label="Close modal"
 						onClick={handleClose}
 					>
 						&times;
@@ -89,7 +135,7 @@ const ProductModal: Component<ModalProps> = ({ product, isOpen, onClose }) => {
 										{(img) => (
 											<img
 												src={img}
-												alt="Thumbnail"
+												alt="Product thumbnail"
 												onClick={() => setMainImage(img)}
 												class="w-12 h-12 sm:w-14 sm:h-14 rounded object-cover border-2 border-transparent hover:border-[var(--color-primary)] cursor-pointer"
 											/>
@@ -101,8 +147,12 @@ const ProductModal: Component<ModalProps> = ({ product, isOpen, onClose }) => {
 
 						{/* Right: Details */}
 						<div class="w-full md:w-1/2 space-y-3 text-sm text-[var(--color-primary)]">
-							<h2 class="text-lg font-semibold">{product.title}</h2>
-							<p class="text-xs opacity-80">{product.description}</p>
+							<h2 id="modal-title" class="text-lg font-semibold">
+								{product.title}
+							</h2>
+							<p id="modal-desc" class="text-xs opacity-80">
+								{product.description}
+							</p>
 
 							<p class="text-base font-bold">
 								&#8358;{product.price.toLocaleString()}
