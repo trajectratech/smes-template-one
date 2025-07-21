@@ -1,21 +1,10 @@
-export type SectionKey =
-	| "hero"
-	| "about"
-	| "services"
-	| "pricing"
-	| "testimonials"
-	| "contact"
-	| "gallery";
+import type { SectionKeyEnum } from "../enums/section-key";
+import type { SocialKeyEnum } from "../enums/social-key";
+import type { FAQsSection } from "./faqs";
+import type { Product } from "./product";
 
-export type SocialKey =
-	| "instagram"
-	| "facebook"
-	| "tiktok"
-	| "x"
-	| "twitter"
-	| "linkedin"
-	| "pinterest"
-	| "youtube";
+export type SectionKey = `${SectionKeyEnum}`;
+export type SocialKey = `${SocialKeyEnum}`;
 
 export interface ThemeConfig {
 	brand: {
@@ -71,7 +60,7 @@ export interface ThemeConfig {
 		galleryTitle?: string;
 		gallery?: { imageUrl: string; alt?: string; caption?: string }[];
 	};
-	logo: {
+	logo?: {
 		dimensions: {
 			width: number;
 			height: number;
@@ -100,25 +89,30 @@ export interface ThemeConfig {
 		servicesSection: {
 			heading: string;
 			paragraph: string;
-			listItems: { title: string; description: string }[];
+			listItems: { title: string; description?: string }[];
 		};
-		testimonialsSection: {
+		testimonialsSection?: {
 			heading: string;
 			testimonials: {
 				name: string;
 				position: string;
 				comment: string;
 				rating: number;
-				avatarUrl: string;
+				avatarUrl?: string;
 			}[];
 		};
+		productsSection?: {
+			heading: string;
+			products: Product[];
+		};
+		faqsSection: FAQsSection;
 	};
-	pricing: {
+	pricing?: {
 		plan: string;
 		price: string;
 		features: string[];
 	}[];
-	map: {
+	map?: {
 		embedUrl: string;
 	};
 	contact: {
@@ -140,7 +134,7 @@ export interface ThemeConfig {
 		containerWidth: number;
 		containerPadding: number;
 	};
-	interactions: {
+	interactions?: {
 		animationStyles: {
 			[key: string]: string;
 		};
@@ -148,7 +142,7 @@ export interface ThemeConfig {
 			[key: string]: string;
 		};
 	};
-	components: {
+	components?: {
 		buttonStyles: {
 			backgroundColor: string;
 			textColor: string;
@@ -163,7 +157,7 @@ export interface ThemeConfig {
 			};
 		};
 	};
-	responsiveness: {
+	responsiveness?: {
 		breakpoints: {
 			desktop: number;
 			tablet: number;
@@ -171,9 +165,10 @@ export interface ThemeConfig {
 		};
 	};
 	settings: {
-		darkMode: boolean;
-		showBooking: boolean;
-		showPricing: boolean;
+		darkMode?: boolean;
+		showBooking?: boolean;
+		showPricing?: boolean;
+		isSeller?: boolean;
 	};
 	poweredBy: {
 		title: string;

@@ -14,6 +14,9 @@ import Footer from "../components/Footer.astro";
 import FontLoader from "../components/FontLoader.astro";
 
 import "../styles/global.css";
+import Products from "../components/Products";
+import { SectionKeyEnum } from "../enums/section-key";
+import FAQS from "../components/FAQS.astro";
 
 const data = mainJson as ThemeConfig;
 const layout: SectionKey[] = data.layout.sectionOrder;
@@ -41,7 +44,9 @@ const sectionMap: Record<SectionKey, any> = {
 	pricing: Pricing,
 	testimonials: Testimonials,
 	gallery: Gallery,
-	contact: Map,
+	map: Map,
+	products: Products,
+	faqs: FAQS,
 };
 
 const sameAsUrls = data.socialMedia?.map((sm) => sm.url) ?? [];
@@ -251,7 +256,9 @@ const organizationSchema = {
 		/>
 	</head>
 
-	<body class="bg-background text-text font-sans leading-relaxed scroll-smooth">
+	<body
+		class="bg-[var(--color-background)] text-text font-sans leading-relaxed scroll-smooth"
+	>
 		<Navbar data={data} mobileNavVariant="slide-down" />
 
 		{
@@ -262,22 +269,34 @@ const organizationSchema = {
 
 				// Conditional checks for dynamic sections
 				if (
-					section === "pricing" &&
+					section === SectionKeyEnum.Pricing &&
 					(!Array.isArray(data.pricing) || data.pricing.length === 0)
 				)
 					return null;
 				if (
-					section === "testimonials" &&
+					section === SectionKeyEnum.Testimonials &&
 					!data?.content?.testimonialsSection?.testimonials?.length
 				)
 					return null;
-				if (section === "gallery" && !data?.imagery?.gallery?.length)
+				if (
+					section === SectionKeyEnum.Gallery &&
+					!data?.imagery?.gallery?.length
+				)
 					return null;
-				if (section === "contact" && !data?.map?.embedUrl) return null;
-
+				if (section === SectionKeyEnum.Map && !data?.map?.embedUrl) return null;
+				if (
+					section === SectionKeyEnum.Products &&
+					!data?.settings?.isSeller &&
+					!data?.content?.productsSection?.products?.length
+				)
+					return null;
 				return (
 					<section aria-labelledby={`${section}-heading`}>
-						<Component data={data} />
+						{section === SectionKeyEnum.Products ? (
+							<Products client:load data={data} />
+						) : (
+							<Component data={data} />
+						)}
 					</section>
 				);
 			})
@@ -288,10 +307,11 @@ const organizationSchema = {
 
 		<button
 			id="back-to-top"
-			class="cursor-pointer fixed bottom-6 right-6 z-50 px-5 py-2 rounded-full bg-[var(--color-primary)] text-[var(--color-background)] shadow-xl hover:shadow-2xl transition-all duration-300 opacity-0 pointer-events-none glow"
+			class="cursor-pointer fixed bottom-6 right-6 z-50 px-5 py-2 rounded-full bg-[var(--color-primary)] text-[var(--color-background)] shadow-xl hover:shadow-2xl transition-all duration-300 opacity-0 pointer-events-none glow flex items-center justify-center gap-2"
 			aria-label="Back to top"
 		>
-			⬆ Back to Top
+			<span class="text-lg">⬆</span>
+			<span class="hidden sm:inline">Back to Top</span>
 		</button>
 
 		<script is:inline>
