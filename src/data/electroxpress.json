@@ -1,0 +1,228 @@
+{
+	"brand": {
+		"title": "ElectroXpress – Innovative Electronics & Gadgets",
+		"businessName": "ElectroXpress",
+		"tagline": "Smart Tech, Smarter Living",
+		"description": "ElectroXpress brings you the latest gadgets and electronics for home, work, and play.",
+		"logoImage": "/logo/electrox.webp",
+		"url": "https://electro-xpress.example.com",
+		"keywords": ["electronics", "gadgets", "smart home", "audio", "tech"]
+	},
+	"colors": {
+		"primary": "#14532D",
+		"secondary": "#4ADE80",
+		"accent": "#166534",
+		"background": "#F7FEE7",
+		"text": "#1A1A1A",
+		"heading": "#064E3B",
+		"link": "#15803D",
+		"hover": "#166534",
+		"active": "#065F46",
+		"error": "#DC2626",
+		"success": "#22C55E",
+		"muted": "#D1FAE5"
+	},
+	"typography": {
+		"fontFamily": "Inter",
+		"fontSizes": {
+			"h1": "40px",
+			"h2": "32px",
+			"h3": "24px",
+			"paragraph": "16px",
+			"caption": "14px"
+		},
+		"fontStyles": {
+			"bold": "700",
+			"italic": "italic",
+			"underline": "underline"
+		},
+		"fontWeights": {
+			"light": 300,
+			"regular": 400,
+			"medium": 500,
+			"bold": 700,
+			"black": 900
+		}
+	},
+	"imagery": {
+		"heroImage": "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"heroTextColor": "#ffffff",
+		"logoImage": "/logo/electrox.webp"
+	},
+	"socialMedia": [
+		{ "name": "Instagram", "url": "https://instagram.com/electroxpress" },
+		{ "name": "Facebook", "url": "https://facebook.com/electroxpress" }
+	],
+	"content": {
+		"heroSection": {
+			"heading": "Welcome to ElectroXpress",
+			"paragraph": "Your one-stop shop for quality electronics.",
+			"ctaText": "Shop Now",
+			"ctaUrl": "#products"
+		},
+		"aboutSection": {
+			"heading": "Who We Are",
+			"paragraph": "ElectroXpress offers curated, top-rated gadgets that blend innovation with affordability.",
+			"imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800"
+		},
+		"servicesSection": {
+			"heading": "Our Categories",
+			"paragraph": "",
+			"listItems": [
+				{ "title": "Smartphones" },
+				{ "title": "Headphones & Audio" },
+				{ "title": "Smart Home Devices" },
+				{ "title": "Wearables" }
+			]
+		},
+		"testimonialsSection": {
+			"heading": "Customer Reviews",
+			"testimonials": [
+				{
+					"name": "John D.",
+					"position": "Tech Enthusiast",
+					"comment": "Great quality gear and fast shipping!",
+					"rating": 5
+				}
+			]
+		},
+		"faqsSection": {
+			"heading": "FAQs",
+			"faqs": [
+				{
+					"question": "How long is delivery?",
+					"answer": "Standard delivery takes 3–5 business days."
+				},
+				{
+					"question": "What payment methods?",
+					"answer": "We accept PayPal, Visa, MasterCard, and bank transfers."
+				},
+				{
+					"question": "Can I return products?",
+					"answer": "Yes, returns accepted within 14 days in original condition."
+				}
+			]
+		},
+		"productsSection": {
+			"heading": "Featured Tech Products",
+			"products": [
+				{
+					"id": "prod-001",
+					"title": "Wireless Noise‑Cancelling Headphones",
+					"description": "Up to 30 hrs battery, premium sound, comfy fit.",
+					"price": 199,
+					"imageUrl": "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+					"images": [
+						"https://images.unsplash.com/photo-1613040809024-b4ef7ba99bc3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+						"https://images.unsplash.com/photo-1545127398-14699f92334b?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+						"https://images.unsplash.com/photo-1527283646354-d874f249ea2b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+					],
+					"rating": {
+						"score": 4.6,
+						"count": 128
+					},
+					"reviews": [
+						{
+							"name": "Jane Doe",
+							"comment": "Amazing sound quality and very comfortable!",
+							"rating": 5
+						},
+						{
+							"name": "John Smith",
+							"comment": "Battery life is great, but the ANC could be better.",
+							"rating": 4
+						}
+					],
+					"brand": "SoundPro",
+					"category": "Audio",
+					"tags": ["wireless", "headphones", "noise-cancelling"],
+					"sortKey": {
+						"priceValue": 199,
+						"ratingScore": 4.6
+					},
+					"actionText": "Buy Now",
+					"actionUrl": "https://www.amazon.com/dp/B09XYZ123"
+				},
+				{
+					"id": "prod-002",
+					"title": "Smart Wi‑Fi Speaker",
+					"description": "Voice assistant + stereo sound, compact design.",
+					"price": 99,
+					"imageUrl": "https://images.unsplash.com/photo-1646425040945-8db4a756dd95?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+					"images": [
+						"https://images.unsplash.com/photo-1594419015530-4676f41c4bb9?q=80&w=1189&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+						"https://images.unsplash.com/photo-1674303324806-7018a739ed11?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+					],
+					"rating": {
+						"score": 4.3,
+						"count": 76
+					},
+					"reviews": [
+						{
+							"name": "Ali Yusuf",
+							"comment": "Solid sound for its size. Setup was quick.",
+							"rating": 4
+						}
+					],
+					"brand": "EchoTech",
+					"category": "Smart Home",
+					"tags": ["smart", "speaker"],
+					"sortKey": {
+						"priceValue": 99,
+						"ratingScore": 4.3
+					},
+					"actionText": "Buy Now",
+					"actionUrl": ""
+				},
+				{
+					"id": "prod-003",
+					"title": "USB-C Charging Cable",
+					"description": "Durable and fast-charging, 1.5m long.",
+					"price": 15,
+					"imageUrl": "https://images.unsplash.com/photo-1572721546624-05bf65ad7679?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+					"brand": "Generic",
+					"category": "Accessories",
+					"tags": ["cable", "usb-c", "charging"],
+					"sortKey": {
+						"priceValue": 15
+					},
+					"actionText": "Buy",
+					"actionUrl": ""
+				}
+			]
+		}
+	},
+	"contact": {
+		"email": "support@electroXpress.com",
+		"phone": "+2347066120776",
+		"whatsapp": "+2347066120776",
+		"address": "Lagos, Nigeria",
+		"addressLocality": "Lagos",
+		"addressRegion": "Lagos",
+		"addressCountry": "NG",
+		"geoData": {
+			"latitude": 9.051106,
+			"longitude": 7.204292
+		}
+	},
+	"layout": {
+		"sectionOrder": [
+			"hero",
+			"about",
+			"products",
+			"services",
+			"testimonials",
+			"faqs",
+			"contact"
+		],
+		"sectionPadding": 60,
+		"containerWidth": 1200,
+		"containerPadding": 24
+	},
+	"settings": { "darkMode": false, "isSeller": true },
+
+	"poweredBy": {
+		"title": "Trajectra Technologies",
+		"url": "https://www.trajectra.com"
+	}
+}
