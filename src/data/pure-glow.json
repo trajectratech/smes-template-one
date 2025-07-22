@@ -210,6 +210,9 @@
 			"mobile": 480
 		}
 	},
+	"ecommerce": {
+		"currency": ""
+	},
 	"settings": {
 		"darkMode": false,
 		"showBooking": false,

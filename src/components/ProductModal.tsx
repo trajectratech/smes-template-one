@@ -6,6 +6,7 @@ import {
 	on,
 	type Component,
 } from "solid-js";
+
 import type { Product } from "../types/product";
 
 interface ModalProps {
@@ -97,7 +98,9 @@ const ProductModal: Component<ModalProps> = ({ product, isOpen, onClose }) => {
 		<Show when={isOpen}>
 			<div
 				class={`fixed inset-0 z-50 flex items-center justify-center px-2 sm:px-4 bg-[var(--color-primary)]/40 backdrop-blur-sm transition-opacity duration-300 ${
-					visible() ? "opacity-100" : "opacity-0 pointer-events-none"
+					visible()
+						? "opacity-100 pointer-events-auto"
+						: "opacity-0 pointer-events-none"
 				}`}
 			>
 				<div

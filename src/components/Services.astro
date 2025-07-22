@@ -15,7 +15,7 @@ const backgroundImage =
 <section
 	id="services"
 	aria-labelledby="services-heading"
-	class="py-24 relative overflow-hidden bg-[var(--color-background)] text-[var(--color-text)]"
+	class="scrolling-section py-24 relative overflow-hidden bg-[var(--color-background)] text-[var(--color-text)]"
 >
 	<!-- Background Overlay (decorative only) -->
 	{
@@ -44,7 +44,7 @@ const backgroundImage =
 					return (
 						<article
 							aria-labelledby={serviceId}
-							class="group bg-white/10 backdrop-blur-xl rounded-2xl p-6 shadow-md hover:shadow-xl transition-transform duration-500 ease-out transform hover:-translate-y-2 hover:scale-[1.02]"
+							class="card group bg-white/10 backdrop-blur-xl rounded-2xl p-6 shadow-md hover:shadow-xl transition-transform duration-500 ease-out transform hover:-translate-y-2 hover:scale-[1.02]"
 							style={`border: 1px solid rgba(255, 255, 255, 0.1); animation-delay: ${index * 100}ms;`}
 						>
 							<div

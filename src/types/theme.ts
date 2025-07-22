@@ -1,3 +1,4 @@
+import type { BusinessKeyEnum } from "../enums/business-key";
 import type { SectionKeyEnum } from "../enums/section-key";
 import type { SocialKeyEnum } from "../enums/social-key";
 import type { FAQsSection } from "./faqs";
@@ -5,6 +6,7 @@ import type { Product } from "./product";
 
 export type SectionKey = `${SectionKeyEnum}`;
 export type SocialKey = `${SocialKeyEnum}`;
+export type BusinessKey = `${BusinessKeyEnum}`;
 
 export interface ThemeConfig {
 	brand: {
@@ -170,6 +172,26 @@ export interface ThemeConfig {
 		showPricing?: boolean;
 		isSeller?: boolean;
 	};
+	booking?: {
+		enabled: boolean;
+		bookingUrl?: string;
+		bookingInstructions?: string;
+	};
+
+	ecommerce?: {
+		currency: string;
+		allowCart?: boolean;
+		paymentProviders?: string[];
+	};
+	seo?: {
+		pageTitle?: string;
+		metaDescription?: string;
+		structuredData?: {
+			type: BusinessKey;
+			schemaJson: any;
+		};
+	};
+
 	poweredBy: {
 		title: string;
 		url: string;

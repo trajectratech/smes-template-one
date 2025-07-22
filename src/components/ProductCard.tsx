@@ -14,7 +14,7 @@ export default function ProductCard({
 
 	return (
 		<div
-			class="cursor-pointer bg-[var(--color-background)] rounded-2xl border border-[var(--color-primary)]/10 shadow-md hover:shadow-xl transition duration-300 overflow-hidden group"
+			class="card cursor-pointer bg-[var(--color-background)] rounded-2xl border border-[var(--color-primary)]/10 shadow-md hover:shadow-xl transition duration-300 overflow-hidden group"
 			onClick={onClick}
 		>
 			<img

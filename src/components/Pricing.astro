@@ -12,7 +12,7 @@ const { data } = Astro.props;
 <section
 	id="pricing"
 	aria-labelledby="pricing-heading"
-	class="py-24 bg-[var(--color-muted)] text-[var(--color-text)]"
+	class="py-24 bg-[var(--color-muted)] text-[var(--color-text)] scrolling-section"
 >
 	<div class="max-w-6xl mx-auto px-6">
 		<h2
@@ -28,7 +28,7 @@ const { data } = Astro.props;
 					data.pricing.map((plan, idx) => (
 						<article
 							role="listitem"
-							class="rounded-2xl border shadow transition hover:scale-[1.03] hover:shadow-lg bg-[var(--color-background)] text-[var(--color-text)] p-6 animate-fade-in-up"
+							class="card rounded-2xl border shadow transition hover:scale-[1.03] hover:shadow-lg bg-[var(--color-background)] text-[var(--color-text)] p-6 animate-fade-in-up"
 							style={{
 								animationDelay: `${idx * 100}ms`,
 								animationFillMode: "both",

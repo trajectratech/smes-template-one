@@ -8,29 +8,31 @@ export interface Props {
 }
 
 const { data } = Astro.props;
-const {testimonials, heading} = data.content.testimonialsSection
-
+const testimonialsSection = data.content?.testimonialsSection;
+// const testimonials = testimonialsSection.testimonials ?? [];
+// const heading = testimonialsSection.heading ?? "Testimonials";
 ---
 
 <section
 	id="testimonials"
 	aria-labelledby="testimonials-heading"
 	role="region"
-	class="py-24 bg-[var(--color-background)]"
+	class="scrolling-section py-24 bg-[var(--color-background)]"
 >
 	<div class="max-w-5xl mx-auto px-6">
-		<h2
+		{testimonialsSection?.heading &&	<h2
 			id="testimonials-heading"
 			class="text-3xl font-bold text-center mb-12 text-[var(--color-primary)]"
 		>
-			{heading}
-		</h2>
+			{testimonialsSection.heading}
+		</h2> }
+	
 
 		<div class="grid gap-8 md:grid-cols-2">
-			{testimonials &&
-				testimonials.map((t, index) => (
+			{Array.isArray(testimonialsSection?.testimonials) && testimonialsSection?.testimonials?.length > 0 &&  
+				testimonialsSection?.testimonials.map((t, index) => (
 					<figure
-						class="bg-[var(--color-muted)] p-6 rounded-2xl shadow transition-transform duration-500 ease-in-out opacity-0 animate-fade-in-up"
+						class="card bg-[var(--color-muted)] p-6 rounded-2xl shadow transition-transform duration-500 ease-in-out opacity-0 animate-fade-in-up"
 						style={`animation-delay: ${index * 150}ms`}
 					>
 						<!-- Star Rating -->

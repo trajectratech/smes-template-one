@@ -1,0 +1,151 @@
+---
+// src/layouts/BaseLayout.astro
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import FontLoader from "../components/FontLoader.astro";
+
+import "../styles/global.css";
+
+const { title, description, url, keywords, businessName, logoImage } =
+	Astro.props.data.brand;
+const colorVars = Astro.props.colorVars;
+const structuredData = Astro.props.structuredData;
+const webPageSchema = Astro.props.webPageSchema;
+const breadcrumbSchema = Astro.props.breadcrumbSchema;
+const ratingSchema = Astro.props.ratingSchema;
+const organizationSchema = Astro.props.organizationSchema;
+---
+
+<html
+	lang="en"
+	style={Object.entries(colorVars)
+		.map(([k, v]) => `${k}: ${v}`)
+		.join("; ")}
+>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<FontLoader fontFamily={Astro.props.data.typography?.fontFamily || ""} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords.join(", ")} />
+		<meta name="theme-color" content={colorVars["--color-primary"]} />
+		<meta name="author" content={businessName} />
+		<link rel="canonical" href={url} />
+		<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+		<link rel="icon" href="/favicon.ico" />
+
+		<!-- OG + Twitter + Pinterest -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta
+			property="og:image"
+			content={Astro.props.data.imagery?.heroImage || logoImage}
+		/>
+		<meta property="og:url" content={url} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={businessName} />
+		<meta name="twitter:description" content={description} />
+		<meta
+			name="twitter:image"
+			content={Astro.props.data.imagery?.heroImage || logoImage}
+		/>
+
+		<!-- Structured Data -->
+		<script
+			type="application/ld+json"
+			set:html={JSON.stringify(structuredData)}
+		/>
+		<script
+			type="application/ld+json"
+			set:html={JSON.stringify(webPageSchema)}
+		/>
+		{
+			breadcrumbSchema && (
+				<script
+					type="application/ld+json"
+					set:html={JSON.stringify(breadcrumbSchema)}
+				/>
+			)
+		}
+		{
+			ratingSchema && (
+				<script
+					type="application/ld+json"
+					set:html={JSON.stringify(ratingSchema)}
+				/>
+			)
+		}
+		<script
+			type="application/ld+json"
+			set:html={JSON.stringify(organizationSchema)}
+		/>
+	</head>
+	<body
+		class="bg-[var(--color-background)] text-text font-sans leading-relaxed scroll-smooth"
+	>
+		<Navbar data={Astro.props.data} mobileNavVariant="slide-down" />
+		<slot />
+		<!-- Dynamic Page Content -->
+		<Footer data={Astro.props.data} />
+
+		<!-- Back to Top -->
+		<button
+			id="back-to-top"
+			class="cursor-pointer fixed bottom-6 right-6 z-50 px-5 py-2 rounded-full bg-[var(--color-primary)] text-[var(--color-background)] shadow-xl hover:shadow-2xl transition-all duration-300 opacity-0 pointer-events-none glow flex items-center justify-center gap-2"
+			aria-label="Back to top"
+		>
+			<span class="text-lg">⬆</span>
+			<span class="hidden sm:inline">Back to Top</span>
+		</button>
+
+		<script is:inline>
+			const backToTopBtn = document.getElementById("back-to-top");
+			window.addEventListener("scroll", () => {
+				if (window.scrollY > 300) {
+					backToTopBtn.classList.add("opacity-100", "pointer-events-auto");
+					backToTopBtn.classList.remove("opacity-0", "pointer-events-none");
+				} else {
+					backToTopBtn.classList.add("opacity-0", "pointer-events-none");
+					backToTopBtn.classList.remove("opacity-100", "pointer-events-auto");
+				}
+			});
+			backToTopBtn.addEventListener("click", () => {
+				window.scrollTo({ top: 0, behavior: "smooth" });
+			});
+		</script>
+		<script>
+			import { animate, stagger, inView } from "motion";
+			inView(
+				".scrolling-section",
+				(element) => {
+					animate(
+						element,
+						{ opacity: [0, 1], y: [50, 0] },
+						{ ease: [0.39, 0.24, 0.3, 1], duration: 1 },
+					);
+
+					const cards = element.querySelectorAll(".card");
+					if (cards.length > 0) {
+						animate(
+							cards,
+							{ opacity: [0, 1], y: [25, 0] },
+							{ type: "spring", delay: stagger(0.25, { startDelay: 0.25 }) },
+						);
+					}
+				},
+				{ amount: 0.25 },
+			);
+
+			// Wait for DOM to load
+			window.addEventListener("DOMContentLoaded", () => {
+				const btn = document.querySelector("#back-to-top");
+				if (btn) {
+					btn.addEventListener("mouseenter", () => {
+						animate(btn, { x: [0, -5, 5, -5, 5, 0] }, { duration: 0.4 });
+					});
+				}
+			});
+		</script>
+	</body>
+</html>

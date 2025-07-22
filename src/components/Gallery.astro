@@ -11,7 +11,7 @@ const { gallery, galleryTitle } = Astro.props.data.imagery;
 <section
 	id="gallery"
 	aria-labelledby="gallery-heading"
-	class="py-24 bg-[var(--color-background)]"
+	class="scrolling-section py-24 bg-[var(--color-background)]"
 >
 	<div class="max-w-6xl mx-auto px-6">
 		{
@@ -28,7 +28,7 @@ const { gallery, galleryTitle } = Astro.props.data.imagery;
 		{
 			gallery && gallery.length > 0 ? (
 				<div
-					class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+					class="card grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
 					role="list"
 				>
 					{gallery.map((img, index) => (

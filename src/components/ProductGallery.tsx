@@ -1,6 +1,7 @@
 // src/components/ProductGallery.tsx
 import { createSignal, Show, For } from "solid-js";
 import type { Component } from "solid-js";
+
 import type { Product } from "../types/product"; // adjust path as needed
 
 interface Props {
@@ -31,7 +32,6 @@ const ProductGallery: Component<Props> = (props) => {
 						>
 							<h3 class="font-semibold">{product.title}</h3>
 							<p class="text-sm">{product.description}</p>
-							{/* Add image or price if needed */}
 						</div>
 					)}
 				</For>

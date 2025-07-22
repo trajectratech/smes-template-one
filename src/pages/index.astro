@@ -4,19 +4,18 @@ import mainJson from "../data/theme.json";
 
 import About from "../components/About.astro";
 import Hero from "../components/Hero.astro";
-import Navbar from "../components/Navbar.astro";
 import Pricing from "../components/Pricing.astro";
 import Services from "../components/Services.astro";
 import Testimonials from "../components/Testimonials.astro";
 import Gallery from "../components/Gallery.astro";
 import Map from "../components/Map.astro";
-import Footer from "../components/Footer.astro";
-import FontLoader from "../components/FontLoader.astro";
+import FAQS from "../components/FAQS.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import Products from "../components/Products";
 
 import "../styles/global.css";
-import Products from "../components/Products";
 import { SectionKeyEnum } from "../enums/section-key";
-import FAQS from "../components/FAQS.astro";
 
 const data = mainJson as ThemeConfig;
 const layout: SectionKey[] = data.layout.sectionOrder;
@@ -149,187 +148,34 @@ const organizationSchema = {
 	logo: data.brand.logoImage,
 	sameAs: sameAsUrls,
 };
+
+const props = {
+	data,
+	layout,
+	colorVars,
+	structuredData,
+	webPageSchema,
+	breadcrumbSchema,
+	ratingSchema,
+	organizationSchema,
+	sameAsUrls,
+};
 ---
 
-<html
-	lang="en"
-	style={Object.entries(colorVars)
-		.map(([k, v]) => `${k}: ${v}`)
-		.join("; ")}
->
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="generator" content={Astro.generator} />
-		<FontLoader fontFamily={data.typography?.fontFamily || ""} />
-
-		<title>{data.brand.title}</title>
-		<meta name="description" content={data.brand.description} />
-		<meta name="keywords" content={data.brand.keywords.join(", ")} />
-		<meta name="theme-color" content={data.colors.primary} />
-		<meta name="author" content={data.brand.businessName} />
-		<!-- <meta name="google-site-verification" content="abc123XYZ..." /> -->
-		<link rel="canonical" href={data.brand.url} />
-		<link rel="alternate" hreflang="en" href={data.brand.url} />
-		<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="/android-chrome-192x192.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="/android-chrome-512x512.png"
-		/>
-
-		<!-- Open Graph -->
-		<meta property="og:title" content={data.brand.title} />
-		<meta property="og:description" content={data.brand.description} />
-		<meta
-			property="og:image"
-			content={data.imagery?.heroImage || data.brand.logoImage}
-		/>
-		<meta property="og:url" content={data.brand.url} />
-		<meta property="og:site_name" content={data.brand.businessName} />
-		<meta property="og:locale" content="en_US" />
-
-		<!-- Twitter Card -->
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content={data.brand.businessName} />
-		<meta name="twitter:description" content={data.brand.description} />
-		<meta
-			name="twitter:image"
-			content={data.imagery?.heroImage || data.brand.logoImage}
-		/>
-
-		<!-- Pinterest -->
-		<meta name="pinterest:description" content={data.brand.description} />
-
-		<!-- Favicon and Preload -->
-		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
-
-		<link
-			rel="preload"
-			href={data.imagery?.heroImage || data.brand.logoImage}
-			as="image"
-		/>
-
-		<!-- Index -->
-		<meta name="robots" content="index, follow" />
-
-		<!-- Structured Data: Local Business -->
-		<script
-			type="application/ld+json"
-			set:html={JSON.stringify(structuredData)}
-		/>
-		<script
-			type="application/ld+json"
-			set:html={JSON.stringify(webPageSchema)}
-		/>
-
-		{
-			breadcrumbSchema && (
-				<script
-					type="application/ld+json"
-					set:html={JSON.stringify(breadcrumbSchema)}
-				/>
-			)
-		}
-
-		{
-			ratingSchema && (
-				<script
-					type="application/ld+json"
-					set:html={JSON.stringify(ratingSchema)}
-				/>
-			)
-		}
-		<script
-			type="application/ld+json"
-			set:html={JSON.stringify(organizationSchema)}
-		/>
-	</head>
-
-	<body
-		class="bg-[var(--color-background)] text-text font-sans leading-relaxed scroll-smooth"
-	>
-		<Navbar data={data} mobileNavVariant="slide-down" />
-
-		{
-			layout.map((section) => {
-				const Component = sectionMap[section];
-
-				if (!Component) return null;
-
-				// Conditional checks for dynamic sections
-				if (
-					section === SectionKeyEnum.Pricing &&
-					(!Array.isArray(data.pricing) || data.pricing.length === 0)
-				)
-					return null;
-				if (
-					section === SectionKeyEnum.Testimonials &&
-					!data?.content?.testimonialsSection?.testimonials?.length
-				)
-					return null;
-				if (
-					section === SectionKeyEnum.Gallery &&
-					!data?.imagery?.gallery?.length
-				)
-					return null;
-				if (section === SectionKeyEnum.Map && !data?.map?.embedUrl) return null;
-				if (
-					section === SectionKeyEnum.Products &&
-					!data?.settings?.isSeller &&
-					!data?.content?.productsSection?.products?.length
-				)
-					return null;
-				return (
-					<section aria-labelledby={`${section}-heading`}>
-						{section === SectionKeyEnum.Products ? (
-							<Products client:load data={data} />
-						) : (
-							<Component data={data} />
-						)}
-					</section>
-				);
-			})
-		}
-
-		<Footer data={data} />
-		<!-- Back to Top Button -->
-
-		<button
-			id="back-to-top"
-			class="cursor-pointer fixed bottom-6 right-6 z-50 px-5 py-2 rounded-full bg-[var(--color-primary)] text-[var(--color-background)] shadow-xl hover:shadow-2xl transition-all duration-300 opacity-0 pointer-events-none glow flex items-center justify-center gap-2"
-			aria-label="Back to top"
-		>
-			<span class="text-lg">⬆</span>
-			<span class="hidden sm:inline">Back to Top</span>
-		</button>
-
-		<script is:inline>
-			const backToTopBtn = document.getElementById("back-to-top");
-
-			window.addEventListener("scroll", () => {
-				if (window.scrollY > 300) {
-					backToTopBtn.classList.add("opacity-100", "pointer-events-auto");
-					backToTopBtn.classList.remove("opacity-0", "pointer-events-none");
-				} else {
-					backToTopBtn.classList.add("opacity-0", "pointer-events-none");
-					backToTopBtn.classList.remove("opacity-100", "pointer-events-auto");
-				}
-			});
-
-			backToTopBtn.addEventListener("click", () => {
-				window.scrollTo({ top: 0, behavior: "smooth" });
-			});
-		</script>
-	</body>
-</html>
+<BaseLayout {...props}>
+	{
+		layout.map((section) => {
+			const Component = sectionMap[section];
+			if (!Component) return null;
+			return (
+				<section aria-labelledby={`${section}-heading`}>
+					{section === SectionKeyEnum.Products ? (
+						<Products client:load data={data} />
+					) : (
+						<Component data={data} />
+					)}
+				</section>
+			);
+		})
+	}
+</BaseLayout>

@@ -1,5 +1,7 @@
 import type { JSX } from "solid-js";
 import { createSignal, createMemo, For, Show } from "solid-js";
+import { Motion } from "solid-motionone";
+
 import type { Product } from "../types/product";
 import ProductCard from "./ProductCard";
 import ProductModal from "./ProductModal";
@@ -72,7 +74,7 @@ export default function Products({ data }: Props): JSX.Element {
 	};
 
 	return (
-		<main class="px-4 py-6 md:px-8 lg:px-16">
+		<main class="px-4 py-6 md:px-8 lg:px-16 scrolling-section">
 			{productsSection?.heading && (
 				<h2 class="text-4xl sm:text-5xl font-extrabold text-center mb-8 text-[var(--color-heading)]">
 					{productsSection.heading}
@@ -132,16 +134,34 @@ export default function Products({ data }: Props): JSX.Element {
 				when={filteredProducts().length > 0}
 				fallback={<p class="text-center text-gray-500">No products found.</p>}
 			>
-				<section class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 transition-all">
+				<Motion.section
+					initial={{ opacity: 0, x: -30 }}
+					animate={{ opacity: 1, x: 0 }}
+					transition={{ duration: 0.6 }}
+					class="
+					flex gap-4 overflow-x-auto px-2 py-4 scroll-smooth scroll-px-4 
+					snap-x snap-mandatory 
+					scrollbar-thin scrollbar-thumb-[#999]/50 scrollbar-track-transparent
+					sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 
+					sm:overflow-x-visible
+					"
+				>
 					<For each={filteredProducts()}>
 						{(product) => (
-							<ProductCard
-								product={product}
-								onClick={() => setSelectedProduct(product)}
-							/>
+							<Motion.div
+								initial={{ opacity: 0, y: 30 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.6 }}
+								class="flex-shrink-0 w-[80%] snap-start sm:w-auto"
+							>
+								<ProductCard
+									product={product}
+									onClick={() => setSelectedProduct(product)}
+								/>
+							</Motion.div>
 						)}
 					</For>
-				</section>
+				</Motion.section>
 			</Show>
 
 			{selectedProduct() && (
