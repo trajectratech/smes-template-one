@@ -176,7 +176,6 @@ const props = {
 	{
 		layout.map((section) => {
 			const Component = sectionMap[section];
-			console.log({ Component, section });
 			if (!Component) return null;
 			return (
 				<section aria-labelledby={`${section}-heading`}>
