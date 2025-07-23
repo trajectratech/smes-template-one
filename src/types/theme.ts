@@ -17,6 +17,7 @@ export interface ThemeConfig {
 		logoImage: string;
 		url: string;
 		keywords: string[];
+		publicDirectory: string;
 	};
 	colors: {
 		primary: string;
@@ -108,12 +109,71 @@ export interface ThemeConfig {
 			products: Product[];
 		};
 		faqsSection: FAQsSection;
+		howItWorksSection?: {
+			heading: string;
+			steps: {
+				title: string;
+				description: string;
+				iconUrl?: string;
+			}[];
+		};
+
+		ctaSection?: {
+			heading: string;
+			subheading?: string;
+			ctaText: string;
+			ctaUrl: string;
+			backgroundImage?: string;
+			backgroundColor?: string;
+		};
+
+		targetAudienceSection?: {
+			heading: string;
+			audienceList: {
+				title: string;
+				iconUrl?: string;
+			}[];
+		};
+
+		demoShowcaseSection?: {
+			heading: string;
+			demos: {
+				title: string;
+				url: string;
+				screenshotUrl?: string;
+				description?: string;
+			}[];
+		};
+
+		trustSection?: {
+			heading: string;
+			trustBadges?: string[];
+			guarantees?: string[];
+			stats?: {
+				label: string;
+				value: string;
+			}[];
+		};
+		promoBanner?: {
+			message: string;
+			ctaText: string;
+			ctaUrl: string;
+			expiresAt?: string;
+			enableCountdown?: boolean;
+		};
+
+		liveMetrics?: {
+			showVisitorCount?: boolean;
+			showCustomerCount?: boolean;
+			lastUpdatedText?: string;
+		};
 	};
 	pricing?: {
 		plan: string;
 		price: string;
 		features: string[];
 	}[];
+
 	map?: {
 		embedUrl: string;
 	};
@@ -195,5 +255,6 @@ export interface ThemeConfig {
 	poweredBy: {
 		title: string;
 		url: string;
+		shouldShow: boolean;
 	};
 }

@@ -1,8 +1,7 @@
 // src/components/ProductGallery.tsx
 import { createSignal, Show, For } from "solid-js";
 import type { Component } from "solid-js";
-
-import type { Product } from "../types/product"; // adjust path as needed
+import type { Product } from "../../types/product";
 
 interface Props {
 	products: Product[];

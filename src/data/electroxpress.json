@@ -4,8 +4,8 @@
 		"businessName": "ElectroXpress",
 		"tagline": "Smart Tech, Smarter Living",
 		"description": "ElectroXpress brings you the latest gadgets and electronics for home, work, and play.",
-		"logoImage": "/logo/electrox.webp",
-		"url": "https://electro-xpress.example.com",
+		"logoImage": "/electrox/electrox.webp",
+		"url": "https://smes-2.trajectra.com",
 		"keywords": ["electronics", "gadgets", "smart home", "audio", "tech"]
 	},
 	"colors": {

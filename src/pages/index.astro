@@ -11,11 +11,15 @@ import Gallery from "../components/Gallery.astro";
 import Map from "../components/Map.astro";
 import FAQS from "../components/FAQS.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-
-import Products from "../components/Products";
+import HowItWorks from "../components/HowItWorks.astro";
+import Products from "../components/Products.astro";
+import TargetAudience from "../components/TargetAudience.astro";
+import DemoShowcase from "../components/DemoShowcase.astro";
+import CTA from "../components/CTA.astro";
+import PromoLiveBanner from "../components/PromoLiveBanner.astro";
+import Trust from "../components/Trust.astro";
 
 import "../styles/global.css";
-import { SectionKeyEnum } from "../enums/section-key";
 
 const data = mainJson as ThemeConfig;
 const layout: SectionKey[] = data.layout.sectionOrder;
@@ -37,15 +41,21 @@ const colorVars = {
 
 // Section map using component references
 const sectionMap: Record<SectionKey, any> = {
-	hero: Hero,
-	about: About,
-	services: Services,
-	pricing: Pricing,
-	testimonials: Testimonials,
-	gallery: Gallery,
-	map: Map,
-	products: Products,
-	faqs: FAQS,
+	heroSection: Hero,
+	aboutSection: About,
+	servicesSection: Services,
+	pricingSection: Pricing,
+	testimonialsSection: Testimonials,
+	gallerySection: Gallery,
+	mapSection: Map,
+	productsSection: Products,
+	faqsSection: FAQS,
+	howItWorksSection: HowItWorks,
+	targetAudienceSection: TargetAudience,
+	demoShowcaseSection: DemoShowcase,
+	ctaSection: CTA,
+	promoLiveBanner: PromoLiveBanner,
+	trustSection: Trust,
 };
 
 const sameAsUrls = data.socialMedia?.map((sm) => sm.url) ?? [];
@@ -166,14 +176,11 @@ const props = {
 	{
 		layout.map((section) => {
 			const Component = sectionMap[section];
+			console.log({ Component, section });
 			if (!Component) return null;
 			return (
 				<section aria-labelledby={`${section}-heading`}>
-					{section === SectionKeyEnum.Products ? (
-						<Products client:load data={data} />
-					) : (
-						<Component data={data} />
-					)}
+					<Component data={data} />
 				</section>
 			);
 		})

@@ -7,7 +7,7 @@ import {
 	type Component,
 } from "solid-js";
 
-import type { Product } from "../types/product";
+import type { Product } from "../../types/product";
 
 interface ModalProps {
 	product: Product;

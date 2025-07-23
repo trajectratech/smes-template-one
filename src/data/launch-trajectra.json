@@ -58,21 +58,16 @@
 		"gallery": []
 	},
 	"socialMedia": [
-		{
-			"name": "facebook",
-			"url": "https://web.facebook.com/people/Trajectra/61575689502633/"
-		},
-		{ "name": "x", "url": "https://x.com/trajectra" },
-		{ "name": "linkedin", "url": "https://linkedin.com/company/trajectra" },
-		{ "name": "youtube", "url": "https://youtube.com/@trajectra" },
-		{ "name": "instagram", "url": "https://instagram.com/trajectra" }
+		{ "name": "facebook", "url": "https://facebook.com/trajectra" },
+		{ "name": "twitter", "url": "https://twitter.com/trajectra" },
+		{ "name": "linkedin", "url": "https://linkedin.com/company/trajectra" }
 	],
 	"content": {
 		"heroSection": {
 			"heading": "Launch Your Business Online in 24 Hours",
 			"paragraph": "No coding. No delays. Just a clean, professional business page with your products, contact, and brand — live within a day.",
 			"ctaText": "Launch Now",
-			"ctaUrl": "https://wa.me/2349082906878?text=Hi%2C%20I%E2%80%99m%20interested%20in%20getting%20a%20website%20for%20my%20business.%20Please%20share%20more%20details%20about%20how%20it%20works."
+			"ctaUrl": "#pricing"
 		},
 		"aboutSection": {
 			"heading": "Who We Are",
@@ -117,12 +112,26 @@
 				{ "title": "Local Services" }
 			]
 		},
-
+		"demoShowcaseSection": {
+			"heading": "Examples",
+			"demos": [
+				{
+					"title": "Luxe Beauty Spa",
+					"url": "https://luxe.trajectra.com",
+					"description": "A sleek spa website with bookings and product sales."
+				},
+				{
+					"title": "Rapid Cleaning Services",
+					"url": "https://rapidclean.trajectra.com",
+					"description": "Fast-loading, contact-first website for a home service business."
+				}
+			]
+		},
 		"ctaSection": {
 			"heading": "Ready to Launch?",
 			"subheading": "Let us help you go from offline to online — instantly.",
 			"ctaText": "Launch Now",
-			"ctaUrl": "https://wa.me/2349082906878?text=Hi%2C%20I%E2%80%99m%20interested%20in%20getting%20a%20website%20for%20my%20business.%20Please%20share%20more%20details%20about%20how%20it%20works.",
+			"ctaUrl": "#pricing",
 			"backgroundColor": "#34C759"
 		},
 		"trustSection": {
@@ -143,51 +152,22 @@
 			"faqs": [
 				{
 					"question": "Can I edit my website later?",
-					"answer": "Yes, you get access to make content updates yourself without needing to code."
+					"answer": "Yes, you get access to make content updates."
 				},
 				{
 					"question": "Can I sell products?",
-					"answer": "Yes, your website can include product listings and secure payments."
+					"answer": "Yes, the page supports product listings and payments."
 				},
 				{
 					"question": "What if I don’t have a logo?",
-					"answer": "We’ll provide a professional placeholder or help you design a simple logo."
-				},
-				{
-					"question": "How long does it take to get my website?",
-					"answer": "Most websites are delivered within 2-3 working days after content submission."
-				},
-				{
-					"question": "Do I need a domain and hosting?",
-					"answer": "No worries—we can provide a free subdomain or help you set up your own custom domain."
-				},
-				{
-					"question": "Is my website mobile-friendly?",
-					"answer": "Absolutely. All our websites are responsive and optimized for phones and tablets."
-				},
-
-				{
-					"question": "Will my site show on Google?",
-					"answer": "Yes, we implement SEO best practices so your site can rank on search engines."
-				},
-				{
-					"question": "Is there a monthly fee?",
-					"answer": "No hidden fees. You only pay once, unless you choose a plan with ongoing support or hosting."
-				},
-				{
-					"question": "Can I use my own colors and fonts?",
-					"answer": "Yes, we’ll customize the design to match your brand colors and preferred style."
-				},
-				{
-					"question": "I’m not tech-savvy. Will I get support?",
-					"answer": "Definitely. We offer clear guidance and support even after your site is launched."
+					"answer": "We’ll provide a placeholder or help you create one."
 				}
 			]
 		},
 		"promoBanner": {
-			"message": "🚀 Limited Offer: Launch Your Business Website in 24hrs – Only ₦60,000!",
+			"message": "🚀 Limited Offer: Launch Your Business Website in 24hrs – Only ₦25,000!",
 			"ctaText": "Claim This Offer",
-			"ctaUrl": "https://wa.me/2349082906878?text=Hi%2C%20I%E2%80%99m%20interested%20in%20getting%20a%20website%20for%20my%20business.%20Please%20share%20more%20details%20about%20how%20it%20works.",
+			"ctaUrl": "#pricing",
 			"expiresAt": "2025-08-15T23:59:59Z",
 			"enableCountdown": true
 		}
@@ -195,7 +175,7 @@
 	"pricing": [
 		{
 			"plan": "Starter",
-			"price": "₦60,000",
+			"price": "₦25,000",
 			"features": [
 				"1 Page Website",
 				"Custom Domain",
@@ -205,19 +185,12 @@
 		},
 		{
 			"plan": "Pro",
-			"price": "₦100,000",
-			"features": ["All Starter Features", "Product Listing", "Basic Analytics"]
-		},
-		{
-			"plan": "Custom",
-			"price": "From ₦150,000",
+			"price": "₦45,000",
 			"features": [
-				"Custom Features Extension",
-				"Advanced Design",
-				"Ongoing Maintenance",
-				"Performance Optimization",
-				"Priority Support",
-				"Admin Dashboard"
+				"Starter Features",
+				"Product Listing",
+				"Payment Setup",
+				"Basic Analytics"
 			]
 		}
 	],

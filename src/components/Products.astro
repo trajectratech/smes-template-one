@@ -1,0 +1,21 @@
+---
+export interface Props {
+	data: ThemeConfig;
+}
+
+import type { ThemeConfig } from "../types/theme";
+import ProductsComponent from "./tsx/products";
+
+const { productsSection } = Astro.props.data.content;
+const products = productsSection?.products ?? [];
+const hasProducts = Array.isArray(products) && products.length > 0;
+---
+
+{
+	hasProducts && (
+		<ProductsComponent
+			products={products}
+			heading={productsSection?.heading || "Our Products"}
+		/>
+	)
+}

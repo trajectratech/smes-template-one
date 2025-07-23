@@ -2,20 +2,18 @@ import type { JSX } from "solid-js";
 import { createSignal, createMemo, For, Show } from "solid-js";
 import { Motion } from "solid-motionone";
 
-import type { Product } from "../types/product";
-import ProductCard from "./ProductCard";
-import ProductModal from "./ProductModal";
-import type { ThemeConfig } from "../types/theme";
+import ProductCard from "./product-card";
+import ProductModal from "./product-modal";
+import type { Product } from "../../types/product";
 
 interface Props {
-	data: ThemeConfig;
+	products: Product[];
+	heading: string;
 }
 
 type SortOption = "priceAsc" | "priceDesc" | "ratingAsc" | "ratingDesc";
 
-export default function Products({ data }: Props): JSX.Element {
-	const { productsSection } = data.content;
-
+export default function Products({ products, heading }: Props): JSX.Element {
 	const [searchQuery, setSearchQuery] = createSignal("");
 	const [sortOption, setSortOption] = createSignal<SortOption>("priceAsc");
 	const [selectedTags, setSelectedTags] = createSignal<string[]>([]);
@@ -23,17 +21,15 @@ export default function Products({ data }: Props): JSX.Element {
 		null,
 	);
 
-	const allTags = Array.from(
-		new Set(productsSection?.products.flatMap((p) => p.tags || [])),
-	);
+	const allTags = Array.from(new Set(products.flatMap((p) => p.tags || [])));
 
 	const filteredProducts = createMemo(() => {
-		let products = [...(productsSection?.products || [])];
+		let _products = [...(products || [])];
 
 		// Search filter
 		if (searchQuery()) {
 			const query = searchQuery().toLowerCase();
-			products = products.filter(
+			_products = products.filter(
 				(p) =>
 					p.title.toLowerCase().includes(query) ||
 					p.description?.toLowerCase().includes(query),
@@ -42,13 +38,13 @@ export default function Products({ data }: Props): JSX.Element {
 
 		// Tag filter
 		if (selectedTags().length > 0) {
-			products = products.filter((p) =>
+			_products = products.filter((p) =>
 				p.tags?.some((tag) => selectedTags().includes(tag)),
 			);
 		}
 
 		// Sorting
-		products.sort((a, b) => {
+		_products.sort((a, b) => {
 			switch (sortOption()) {
 				case "priceAsc":
 					return a.price - b.price;
@@ -61,7 +57,7 @@ export default function Products({ data }: Props): JSX.Element {
 			}
 		});
 
-		return products;
+		return _products;
 	});
 
 	const toggleTag = (tag: string) => {
@@ -75,9 +71,9 @@ export default function Products({ data }: Props): JSX.Element {
 
 	return (
 		<main class="px-4 py-6 md:px-8 lg:px-16 scrolling-section">
-			{productsSection?.heading && (
+			{heading && (
 				<h2 class="text-4xl sm:text-5xl font-extrabold text-center mb-8 text-[var(--color-heading)]">
-					{productsSection.heading}
+					{heading}
 				</h2>
 			)}
 

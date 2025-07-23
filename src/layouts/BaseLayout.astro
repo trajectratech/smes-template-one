@@ -4,16 +4,27 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import FontLoader from "../components/FontLoader.astro";
 
+import type { BaseLayoutProps } from "../types/base-layout.ts";
+
 import "../styles/global.css";
 
-const { title, description, url, keywords, businessName, logoImage } =
-	Astro.props.data.brand;
-const colorVars = Astro.props.colorVars;
-const structuredData = Astro.props.structuredData;
-const webPageSchema = Astro.props.webPageSchema;
-const breadcrumbSchema = Astro.props.breadcrumbSchema;
-const ratingSchema = Astro.props.ratingSchema;
-const organizationSchema = Astro.props.organizationSchema;
+const props = Astro.props as BaseLayoutProps;
+
+const {
+	title,
+	description,
+	url,
+	keywords,
+	businessName,
+	logoImage,
+	publicDirectory,
+} = props.data.brand;
+const colorVars = props.colorVars;
+const structuredData = props.structuredData;
+const webPageSchema = props.webPageSchema;
+const breadcrumbSchema = props.breadcrumbSchema;
+const ratingSchema = props.ratingSchema;
+const organizationSchema = props.organizationSchema;
 ---
 
 <html
@@ -25,30 +36,73 @@ const organizationSchema = Astro.props.organizationSchema;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<FontLoader fontFamily={Astro.props.data.typography?.fontFamily || ""} />
-		<title>{title}</title>
-		<meta name="description" content={description} />
+		<FontLoader fontFamily={props.data.typography?.fontFamily || ""} />
+		<title>{props.data.seo?.pageTitle || title}</title>
+		<meta
+			name="description"
+			content={props.data.seo?.metaDescription || description}
+		/>
 		<meta name="keywords" content={keywords.join(", ")} />
 		<meta name="theme-color" content={colorVars["--color-primary"]} />
 		<meta name="author" content={businessName} />
 		<link rel="canonical" href={url} />
 		<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-		<link rel="icon" href="/favicon.ico" />
+
+		{/* Favicon (browser tab) */}
+		<link rel="icon" href={publicDirectory + "/favicon.ico"} />
+
+		{/* Apple Touch Icon */}
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href={publicDirectory + "/apple-touch-icon.png"}
+		/>
+
+		{/* Android Chrome Icon */}
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href={publicDirectory + "/android-chrome-192x192.png"}
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="512x512"
+			href={publicDirectory + "/android-chrome-512x512.png"}
+		/>
+
+		{/* General PNG icons */}
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href={publicDirectory + "/favicon-32x32.png"}
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href={publicDirectory + "/favicon-16x16.png"}
+		/>
 
 		<!-- OG + Twitter + Pinterest -->
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta
 			property="og:image"
-			content={Astro.props.data.imagery?.heroImage || logoImage}
+			content={props.data.imagery?.heroImage || logoImage}
 		/>
 		<meta property="og:url" content={url} />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={businessName} />
-		<meta name="twitter:description" content={description} />
+		<meta
+			name="twitter:description"
+			content={props.data.seo?.metaDescription || description}
+		/>
 		<meta
 			name="twitter:image"
-			content={Astro.props.data.imagery?.heroImage || logoImage}
+			content={props.data.imagery?.heroImage || logoImage}
 		/>
 
 		<!-- Structured Data -->
@@ -84,10 +138,10 @@ const organizationSchema = Astro.props.organizationSchema;
 	<body
 		class="bg-[var(--color-background)] text-text font-sans leading-relaxed scroll-smooth"
 	>
-		<Navbar data={Astro.props.data} mobileNavVariant="slide-down" />
+		<Navbar data={props.data} mobileNavVariant="slide-down" />
 		<slot />
 		<!-- Dynamic Page Content -->
-		<Footer data={Astro.props.data} />
+		<Footer data={props.data} />
 
 		<!-- Back to Top -->
 		<button
