@@ -136,10 +136,13 @@ const organizationSchema = props.organizationSchema;
 		/>
 	</head>
 	<body
-		class="bg-[var(--color-background)] text-text font-sans leading-relaxed scroll-smooth"
+		class="bg-[var(--color-background)] text-text font-sans leading-relaxed scroll-smooth min-h-screen flex flex-col"
 	>
-		<Navbar data={props.data} mobileNavVariant="slide-down" />
-		<slot />
+		<main class="flex-grow">
+			<Navbar data={props.data} mobileNavVariant="slide-down" />
+			<slot />
+		</main>
+
 		<!-- Dynamic Page Content -->
 		<Footer data={props.data} />
 

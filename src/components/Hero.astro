@@ -18,49 +18,49 @@ const textColor =
 		: `var(--color-heading)`;
 ---
 
-<section
-	class="hero scrolling-section relative isolate flex flex-col items-center justify-center text-center overflow-hidden px-6 py-24 sm:py-32"
-	style={`background: ${!hasHeroImage ? `var(--color-background)` : "none"}; color: var(--color-text);`}
-	aria-label="Hero Section"
->
-	{
-		!hasHeroImage && (
-			<div
-				class="absolute inset-0 z-0 animate-[pulse_8s_ease-in-out_infinite] bg-[radial-gradient(circle_at_top_left,var(--color-primary)_0%,transparent_70%)] opacity-20"
-				aria-hidden="true"
-			/>
-		)
-	}
-
-	{
-		hasHeroImage && (
-			<img
-				src={heroImage}
-				alt="Hero background"
-				class="absolute inset-0 z-0 w-full h-full object-cover"
-				fetchpriority="high"
-				loading="eager"
-				decoding="async"
-				aria-hidden="true"
-			/>
-		)
-	}
-
-	<div class="relative z-10 max-w-4xl mx-auto">
-		<h1
-			class="text-4xl md:text-6xl font-extrabold tracking-tight"
-			style={`color: ${textColor}`}
+{
+	content && (
+		<section
+			class="hero scrolling-section relative isolate flex flex-col items-center justify-center text-center overflow-hidden px-6 py-24 sm:py-32"
+			style={`background: ${!hasHeroImage ? `var(--color-background)` : "none"}; color: var(--color-text);`}
+			aria-label="Hero Section"
 		>
-			{content.heading}
-		</h1>
+			{!hasHeroImage && (
+				<div
+					class="absolute inset-0 z-0 animate-[pulse_8s_ease-in-out_infinite] bg-[radial-gradient(circle_at_top_left,var(--color-primary)_0%,transparent_70%)] opacity-20"
+					aria-hidden="true"
+				/>
+			)}
 
-		<p
-			class="mt-4 text-lg md:text-xl font-medium"
-			style={`color: ${textColor}`}
-		>
-			{content.paragraph}
-		</p>
+			{hasHeroImage && (
+				<img
+					src={heroImage}
+					alt="Hero background"
+					class="absolute inset-0 z-0 w-full h-full object-cover"
+					fetchpriority="high"
+					loading="eager"
+					decoding="async"
+					aria-hidden="true"
+				/>
+			)}
 
-		<CallToActionButton href={content.ctaUrl} label={content.ctaText} />
-	</div>
-</section>
+			<div class="relative z-10 max-w-4xl mx-auto">
+				<h1
+					class="text-4xl md:text-6xl font-extrabold tracking-tight"
+					style={`color: ${textColor}`}
+				>
+					{content.heading}
+				</h1>
+
+				<p
+					class="mt-4 text-lg md:text-xl font-medium"
+					style={`color: ${textColor}`}
+				>
+					{content.paragraph}
+				</p>
+
+				<CallToActionButton href={content.ctaUrl} label={content.ctaText} />
+			</div>
+		</section>
+	)
+}

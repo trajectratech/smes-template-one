@@ -14,6 +14,7 @@ const hasProducts = Array.isArray(products) && products.length > 0;
 {
 	hasProducts && (
 		<ProductsComponent
+			client:load
 			products={products}
 			heading={productsSection?.heading || "Our Products"}
 		/>

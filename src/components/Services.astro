@@ -10,7 +10,7 @@ export interface Props {
 const { servicesSection } = Astro.props.data.content;
 ---
 
-<section
+{Array.isArray(servicesSection?.listItems)  && servicesSection?.listItems?.length>0 && <section
 	id="services"
 	aria-labelledby="services-heading"
 	class="scrolling-section py-24 relative overflow-hidden bg-[var(--color-background)] text-[var(--color-text)]"
@@ -70,3 +70,4 @@ const { servicesSection } = Astro.props.data.content;
 		</div>
 	</div>
 </section>
+}

@@ -8,25 +8,23 @@ export interface Props {
 const { gallery, galleryTitle } = Astro.props.data.imagery;
 ---
 
-<section
-	id="gallery"
-	aria-labelledby="gallery-heading"
-	class="scrolling-section py-24 bg-[var(--color-background)]"
->
-	<div class="max-w-6xl mx-auto px-6">
-		{
-			galleryTitle && (
-				<h2
-					id="gallery-heading"
-					class="text-3xl font-bold text-center mb-12 text-[var(--color-primary)]"
-				>
-					{galleryTitle}
-				</h2>
-			)
-		}
+{
+	gallery && gallery.length > 0 && (
+		<section
+			id="gallery"
+			aria-labelledby="gallery-heading"
+			class="scrolling-section py-24 bg-[var(--color-background)]"
+		>
+			<div class="max-w-6xl mx-auto px-6">
+				{galleryTitle && (
+					<h2
+						id="gallery-heading"
+						class="text-3xl font-bold text-center mb-12 text-[var(--color-primary)]"
+					>
+						{galleryTitle}
+					</h2>
+				)}
 
-		{
-			gallery && gallery.length > 0 ? (
 				<div
 					class="card grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
 					role="list"
@@ -51,11 +49,7 @@ const { gallery, galleryTitle } = Astro.props.data.imagery;
 						</figure>
 					))}
 				</div>
-			) : (
-				<p role="status" class="text-center text-gray-500">
-					No images in the gallery yet.
-				</p>
-			)
-		}
-	</div>
-</section>
+			</div>
+		</section>
+	)
+}
