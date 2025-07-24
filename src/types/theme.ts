@@ -59,6 +59,8 @@ export interface ThemeConfig {
 		backgroundImage?: string;
 		heroImage?: string;
 		heroTextColor?: string;
+		heroHasLottie?: boolean;
+		lottiePath?: string;
 		logoImage: string;
 		galleryTitle?: string;
 		gallery?: { imageUrl: string; alt?: string; caption?: string }[];
@@ -111,11 +113,13 @@ export interface ThemeConfig {
 		faqsSection: FAQsSection;
 		howItWorksSection?: {
 			heading: string;
-			steps: {
+			steps?: {
 				title: string;
 				description: string;
 				iconUrl?: string;
 			}[];
+			url?: string;
+			urlText?: string;
 		};
 
 		ctaSection?: {
@@ -170,7 +174,8 @@ export interface ThemeConfig {
 	};
 	pricing?: {
 		plan: string;
-		price: string;
+		price?: string;
+		showPricing?: boolean;
 		features: string[];
 	}[];
 

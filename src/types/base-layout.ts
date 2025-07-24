@@ -93,5 +93,17 @@ export type BaseLayoutProps = {
 		logo: string;
 		sameAs: string[];
 	};
+	faqsSchema: {
+		"@context": "https://schema.org";
+		"@type": "FAQPage";
+		mainEntity: {
+			"@type": "Question";
+			name: string;
+			acceptedAnswer: {
+				"@type": "Answer";
+				text: string;
+			};
+		}[];
+	};
 	sameAsUrls: string[];
 };

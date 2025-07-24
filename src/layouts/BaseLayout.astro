@@ -25,6 +25,7 @@ const webPageSchema = props.webPageSchema;
 const breadcrumbSchema = props.breadcrumbSchema;
 const ratingSchema = props.ratingSchema;
 const organizationSchema = props.organizationSchema;
+const faqsSchema = props.faqsSchema;
 ---
 
 <html
@@ -105,6 +106,12 @@ const organizationSchema = props.organizationSchema;
 			content={props.data.imagery?.heroImage || logoImage}
 		/>
 
+		<script src="//unpkg.com/alpinejs" defer></script>
+
+		<script
+			src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+		></script>
+
 		<!-- Structured Data -->
 		<script
 			type="application/ld+json"
@@ -114,6 +121,7 @@ const organizationSchema = props.organizationSchema;
 			type="application/ld+json"
 			set:html={JSON.stringify(webPageSchema)}
 		/>
+
 		{
 			breadcrumbSchema && (
 				<script
@@ -130,6 +138,16 @@ const organizationSchema = props.organizationSchema;
 				/>
 			)
 		}
+
+		{
+			faqsSchema && (
+				<script
+					type="application/ld+json"
+					set:html={JSON.stringify(faqsSchema)}
+				/>
+			)
+		}
+
 		<script
 			type="application/ld+json"
 			set:html={JSON.stringify(organizationSchema)}

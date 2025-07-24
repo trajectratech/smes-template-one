@@ -39,9 +39,12 @@ const { data } = Astro.props;
 								<h3 class="text-2xl font-bold mb-3 text-[var(--color-primary)]">
 									{plan.plan}
 								</h3>
-								<p class="text-3xl font-semibold mb-6 text-[var(--color-accent)]">
-									{plan.price}
-								</p>
+
+								{plan.showPricing && plan.price && (
+									<p class="text-3xl font-semibold mb-6 text-[var(--color-accent)]">
+										{plan.price}
+									</p>
+								)}
 							</header>
 
 							<ul class="space-y-3 text-sm text-[var(--color-text)]">
