@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+
 import type { ThemeConfig } from "../types/theme";
 
 export interface Props {
@@ -22,7 +23,7 @@ const { socialMedia } = data;
 const iconMap: Record<SocialKey, string> = {
 	instagram: "mdi:instagram",
 	facebook: "mdi:facebook",
-	tiktok: "mdi:tiktok",
+	tiktok: "simple-icons:tiktok",
 	x: "mdi:alpha-x-box", // Twitter (X)
 	twitter: "mdi:twitter",
 	linkedin: "mdi:linkedin",

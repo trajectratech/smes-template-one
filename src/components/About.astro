@@ -14,6 +14,9 @@ const hasAboutContent =
 	content?.heading?.trim() ||
 	content?.paragraph?.trim() ||
 	content?.imageUrl?.trim();
+
+const heroHasLottie = data.imagery.heroHasLottie;
+const heroLottie = data?.imagery?.lottiePath2;
 ---
 
 {
@@ -85,16 +88,31 @@ const hasAboutContent =
 						style="border-color: var(--color-muted);"
 					>
 						<div class="relative w-full" style="aspect-ratio: 16 / 9;">
-							<img
-								src={content.imageUrl}
-								alt={content.heading || "About section image"}
-								class="absolute inset-0 w-full h-full object-cover transition duration-500 hover:scale-105"
-								loading="lazy"
-								decoding="async"
-								fetchpriority="low"
-								role="img"
-							/>
+							<div class="relative h-[400px]">
+								<img
+									src={content.imageUrl}
+									alt={content.heading || "About section image"}
+									class="absolute inset-0 w-full h-[400px] object-cover transition duration-500 hover:scale-105"
+									loading="lazy"
+									decoding="async"
+									fetchpriority="low"
+									role="img"
+								/>
+							</div>
 						</div>
+					</div>
+				)}
+
+				{!content?.imageUrl && heroHasLottie && heroLottie && (
+					<div class="w-full md:w-1/2 h-[300px] md:h-[500px]">
+						<lottie-player
+							src={heroLottie}
+							background="transparent"
+							speed="1"
+							loop
+							autoplay
+							style="width: 100%; height: 100%"
+						/>
 					</div>
 				)}
 			</div>
