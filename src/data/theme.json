@@ -90,7 +90,7 @@
 		},
 		{
 			"name": "Tiktok",
-			"url": "https://tiktok.com/topcartrackerng"
+			"url": "https://www.tiktok.com/@topcartrackerng"
 		}
 	],
 	"content": {
@@ -385,7 +385,7 @@
 	"settings": {
 		"darkMode": true,
 		"showBooking": true,
-		"showPricing": true
+		"showPricing": false
 	},
 	"poweredBy": {
 		"title": "Trajectra Technologies",
