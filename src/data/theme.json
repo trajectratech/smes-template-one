@@ -1,45 +1,39 @@
 {
 	"brand": {
-		"title": "TrackSure - Fleet Management, GPS, Vehicle Tracking and Security",
-		"businessName": "TrackSure",
-		"tagline": "Real-time vehicle tracking and fleet security",
-		"description": "Real-time vehicle tracking and fleet security",
-		"logoImage": "/tracksure/tracksure.webp",
-		"url": "https://smes-1.trajectra.com",
-		"publicDirectory": "/tracksure",
-		"keywords": [
-			"vehicle tracking",
-			"GPS",
-			"fleet management",
-			"security",
-			"TrackSure"
-		]
+		"title": "ElectroXpress – Innovative Electronics & Gadgets",
+		"businessName": "ElectroXpress",
+		"tagline": "Smart Tech, Smarter Living",
+		"description": "ElectroXpress brings you the latest gadgets and electronics for home, work, and play.",
+		"logoImage": "/electrox/electrox.webp",
+		"url": "https://smes-2.trajectra.com",
+		"publicDirectory": "/electrox",
+		"keywords": ["electronics", "gadgets", "smart home", "audio", "tech"]
 	},
 	"colors": {
-		"primary": "#0F172A",
-		"secondary": "#3B82F6",
-		"accent": "#1E40AF",
-		"background": "#F9FAFB",
-		"text": "#111827",
-		"heading": "#0F172A",
-		"link": "#1D4ED8",
-		"hover": "#2563EB",
-		"active": "#1E3A8A",
-		"error": "#e74c3c",
-		"success": "#10B981",
-		"muted": "#D1D5DB"
+		"primary": "#14532D",
+		"secondary": "#4ADE80",
+		"accent": "#166534",
+		"background": "#F7FEE7",
+		"text": "#1A1A1A",
+		"heading": "#064E3B",
+		"link": "#15803D",
+		"hover": "#166534",
+		"active": "#065F46",
+		"error": "#DC2626",
+		"success": "#22C55E",
+		"muted": "#D1FAE5"
 	},
 	"typography": {
-		"fontFamily": "Ubuntu",
+		"fontFamily": "Inter",
 		"fontSizes": {
-			"h1": "36px",
-			"h2": "30px",
+			"h1": "40px",
+			"h2": "32px",
 			"h3": "24px",
 			"paragraph": "16px",
 			"caption": "14px"
 		},
 		"fontStyles": {
-			"bold": "bold",
+			"bold": "700",
 			"italic": "italic",
 			"underline": "underline"
 		},
@@ -52,153 +46,160 @@
 		}
 	},
 	"imagery": {
-		"backgroundImage": "",
-		"logoImage": "/tracksure/tracksure.png",
-		"heroImage": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1283&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-		"heroTextColor": "var(--color-background)",
-		"galleryTitle": "On-Site Showcase",
-		"gallery": [
-			{
-				"imageUrl": "https://images.unsplash.com/photo-1634743556192-d19f0c69ff3a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-				"caption": "Tracking dashboard"
-			},
-			{
-				"imageUrl": "https://images.unsplash.com/photo-1699391679400-faff80dd26f5?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-			},
-			{
-				"imageUrl": "https://images.unsplash.com/photo-1590602562997-1234de679f76?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-			},
-			{
-				"imageUrl": "https://images.unsplash.com/photo-1610647752706-3bb12232b3ab?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-			}
-		]
+		"heroImage": "https://images.unsplash.com/photo-1615655406736-b37c4fabf923?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"heroTextColor": "#ffffff",
+		"logoImage": "/electrox/electrox.webp"
 	},
-	"logo": {
-		"dimensions": {
-			"width": 100,
-			"height": 50
-		},
-		"padding": 10,
-		"margin": 20
-	},
-
-	"googleBusinessProfileLink": "",
-
 	"socialMedia": [
-		{
-			"name": "Instagram",
-			"url": "https://instagram.com/tracksure"
-		},
-		{
-			"name": "Facebook",
-			"url": "https://facebook.com/tracksure"
-		},
-		{
-			"name": "X",
-			"url": "https://x.com/tracksure"
-		},
-		{
-			"name": "Youtube",
-			"url": "https://youtube.com/tracksure"
-		}
+		{ "name": "Instagram", "url": "https://instagram.com/electroxpress" },
+		{ "name": "Facebook", "url": "https://facebook.com/electroxpress" }
 	],
 	"content": {
 		"heroSection": {
-			"heading": "Real-time vehicle tracking and fleet security",
-			"paragraph": "TrackSure helps you monitor and secure your vehicles with ease.",
-			"ctaText": "Request a Demo",
-			"ctaUrl": "https://tracksure.com/request-demo"
+			"heading": "Welcome to ElectroXpress",
+			"paragraph": "Your one-stop shop for quality electronics.",
+			"ctaText": "Shop Now",
+			"ctaUrl": "#products"
 		},
 		"aboutSection": {
-			"heading": "About TrackSure",
-			"paragraph": "TrackSure provides reliable GPS vehicle tracking, fleet management, and 24/7 monitoring solutions to improve safety and efficiency.",
-			"imageUrl": "https://images.unsplash.com/photo-1699391679400-faff80dd26f5?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+			"heading": "Who We Are",
+			"paragraph": "ElectroXpress offers curated, top-rated gadgets that blend innovation with affordability.",
+			"imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800"
 		},
 		"servicesSection": {
-			"heading": "Our Services",
-			"paragraph": "Explore our comprehensive solutions for fleet and vehicle management.",
+			"heading": "Our Categories",
+			"paragraph": "",
 			"listItems": [
-				{ "title": "GPS Vehicle Tracking", "description": "" },
-				{ "title": "Fleet Management", "description": "" },
-				{ "title": "Real-time Alerts & Reports", "description": "" },
-				{ "title": "Geofencing", "description": "" },
-				{ "title": "24/7 Monitoring", "description": "" }
+				{ "title": "Smartphones" },
+				{ "title": "Headphones & Audio" },
+				{ "title": "Smart Home Devices" },
+				{ "title": "Wearables" }
 			]
 		},
 		"testimonialsSection": {
-			"heading": "What Our Cleints Say",
+			"heading": "Customer Reviews",
 			"testimonials": [
 				{
-					"name": "Adewale O.",
-					"position": "Fleet Manager, Lagos Haulage Co.",
-					"comment": "TrackSure helped us reduce vehicle theft and improve route planning. Highly recommended!",
-					"rating": 5,
-					"avatarUrl": ""
-				},
-				{
-					"name": "Ngozi K.",
-					"position": "Business Owner",
-					"comment": "I can now monitor all my delivery vehicles from my phone. It's reliable and efficient.",
-					"rating": 4,
-					"avatarUrl": ""
+					"name": "John D.",
+					"position": "Tech Enthusiast",
+					"comment": "Great quality gear and fast shipping!",
+					"rating": 5
 				}
 			]
 		},
 		"faqsSection": {
-			"heading": "FAQS",
+			"heading": "FAQs",
 			"faqs": [
 				{
-					"question": "How do I install the GPS tracker?",
-					"answer": "Our technicians can assist with installation, or you can follow the manual provided with the device."
+					"question": "How long is delivery?",
+					"answer": "Standard delivery takes 3–5 business days."
 				},
 				{
-					"question": "Can I track multiple vehicles?",
-					"answer": "Yes, our Pro and Enterprise plans support fleet tracking for multiple vehicles."
+					"question": "What payment methods?",
+					"answer": "We accept PayPal, Visa, MasterCard, and bank transfers."
 				},
 				{
-					"question": "How do I place an order?",
-					"answer": "Click the 'Order on WhatsApp' button under the product you're interested in and send us a message."
+					"question": "Can I return products?",
+					"answer": "Yes, returns accepted within 14 days in original condition."
+				}
+			]
+		},
+		"productsSection": {
+			"heading": "Featured Tech Products",
+			"products": [
+				{
+					"id": "prod-001",
+					"title": "Wireless Noise‑Cancelling Headphones",
+					"description": "Up to 30 hrs battery, premium sound, comfy fit.",
+					"price": 199,
+					"imageUrl": "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+					"images": [
+						"https://images.unsplash.com/photo-1613040809024-b4ef7ba99bc3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+						"https://images.unsplash.com/photo-1545127398-14699f92334b?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+						"https://images.unsplash.com/photo-1527283646354-d874f249ea2b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+					],
+					"rating": {
+						"score": 4.6,
+						"count": 128
+					},
+					"reviews": [
+						{
+							"name": "Jane Doe",
+							"comment": "Amazing sound quality and very comfortable!",
+							"rating": 5
+						},
+						{
+							"name": "John Smith",
+							"comment": "Battery life is great, but the ANC could be better.",
+							"rating": 4
+						}
+					],
+					"brand": "SoundPro",
+					"category": "Audio",
+					"tags": ["wireless", "headphones", "noise-cancelling"],
+					"sortKey": {
+						"priceValue": 199,
+						"ratingScore": 4.6
+					},
+					"actionText": "Buy Now",
+					"actionUrl": "https://www.amazon.com/dp/B09XYZ123"
+				},
+				{
+					"id": "prod-002",
+					"title": "Smart Wi‑Fi Speaker",
+					"description": "Voice assistant + stereo sound, compact design.",
+					"price": 99,
+					"imageUrl": "https://images.unsplash.com/photo-1646425040945-8db4a756dd95?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+					"images": [
+						"https://images.unsplash.com/photo-1594419015530-4676f41c4bb9?q=80&w=1189&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+						"https://images.unsplash.com/photo-1674303324806-7018a739ed11?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+					],
+					"rating": {
+						"score": 4.3,
+						"count": 76
+					},
+					"reviews": [
+						{
+							"name": "Ali Yusuf",
+							"comment": "Solid sound for its size. Setup was quick.",
+							"rating": 4
+						}
+					],
+					"brand": "EchoTech",
+					"category": "Smart Home",
+					"tags": ["smart", "speaker"],
+					"sortKey": {
+						"priceValue": 99,
+						"ratingScore": 4.3
+					},
+					"actionText": "Buy Now",
+					"actionUrl": ""
+				},
+				{
+					"id": "prod-003",
+					"title": "USB-C Charging Cable",
+					"description": "Durable and fast-charging, 1.5m long.",
+					"price": 15,
+					"imageUrl": "https://images.unsplash.com/photo-1572721546624-05bf65ad7679?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+					"brand": "Generic",
+					"category": "Accessories",
+					"tags": ["cable", "usb-c", "charging"],
+					"sortKey": {
+						"priceValue": 15
+					},
+					"actionText": "Buy",
+					"actionUrl": ""
 				}
 			]
 		}
 	},
-	"pricing": [
-		{
-			"plan": "Basic Plan",
-			"price": "₦10,000/month",
-			"features": ["Real-time GPS tracking", "1 Vehicle", "SMS Alerts"]
-		},
-		{
-			"plan": "Pro Plan",
-			"price": "₦25,000/month",
-			"features": [
-				"Fleet Management (Up to 5 vehicles)",
-				"Geofencing",
-				"Email + SMS Alerts",
-				"Reports Dashboard"
-			]
-		},
-		{
-			"plan": "Enterprise Plan",
-			"price": "Custom Pricing",
-			"features": [
-				"Unlimited Vehicles",
-				"API Access",
-				"Priority Support",
-				"Custom Integrations"
-			]
-		}
-	],
-	"map": {
-		"embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252168.8803518341!2d7.204291786718748!3d9.051105600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b36c37f0a37%3A0xc006d8db832580ea!2sCentral%20Bank%20of%20Nigeria!5e0!3m2!1sen!2sng!4v1752843098143!5m2!1sen!2sng"
-	},
 	"contact": {
-		"email": "support@tracksure.com",
+		"email": "support@electroXpress.com",
 		"phone": "+2347066120776",
 		"whatsapp": "+2347066120776",
-		"address": "Abuja, Nigeria",
-		"addressLocality": "Abuja",
-		"addressRegion": "Abuja",
+		"address": "Lagos, Nigeria",
+		"addressLocality": "Lagos",
+		"addressRegion": "Lagos",
 		"addressCountry": "NG",
 		"geoData": {
 			"latitude": 9.051106,
@@ -208,56 +209,25 @@
 	"layout": {
 		"sectionOrder": [
 			"heroSection",
+			"productsSection",
 			"testimonialsSection",
+			"servicesSection",
 			"aboutSection",
 			"gallerySection",
 			"pricingSection",
 			"faqsSection",
 			"contactSection"
 		],
-		"sectionPadding": 50,
+		"sectionPadding": 60,
 		"containerWidth": 1200,
-		"containerPadding": 20
+		"containerPadding": 24
 	},
-	"interactions": {
-		"animationStyles": {
-			"fade": "fadeIn 1s ease-in-out"
-		},
-		"transitionEffects": {
-			"hover": "background-color 0.3s ease-in-out, color 0.3s ease-in-out"
-		}
-	},
-	"components": {
-		"buttonStyles": {
-			"backgroundColor": "#0F172A",
-			"textColor": "#ffffff",
-			"padding": 12,
-			"borderRadius": 6
-		},
-		"formStyles": {
-			"inputFieldStyles": {
-				"padding": 10,
-				"border": "1px solid #D1D5DB",
-				"borderRadius": 4
-			}
-		}
-	},
-	"responsiveness": {
-		"breakpoints": {
-			"desktop": 1200,
-			"tablet": 768,
-			"mobile": 480
-		}
-	},
+	"settings": { "darkMode": false, "isSeller": true },
 	"seo": {
-		"pageTitle": "TrackSure - Fleet Management, GPS, Vehicle Tracking and Security",
-		"metaDescription": "TrackSure - Fleet Management, GPS, Vehicle Tracking and Security"
+		"pageTitle": "ElectroXpress – Innovative Electronics & Gadgets",
+		"metaDescription": "ElectroXpress brings you the latest gadgets and electronics for home, work, and play."
 	},
-	"settings": {
-		"darkMode": true,
-		"showBooking": true,
-		"showPricing": true
-	},
+
 	"poweredBy": {
 		"title": "Trajectra Technologies",
 		"url": "https://www.trajectra.com",
