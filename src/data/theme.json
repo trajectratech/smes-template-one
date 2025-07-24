@@ -22,18 +22,18 @@
 		]
 	},
 	"colors": {
-		"primary": "#0000ff",
-		"secondary": "#000000",
-		"accent": "#ffffff",
-		"background": "#F9FAFB",
-		"text": "#111827",
+		"primary": "#2563EB",
+		"secondary": "#1E293B",
+		"accent": "#E0F2FE",
+		"background": "#F8FAFC",
+		"text": "#1F2937",
 		"heading": "#0F172A",
-		"link": "#1D4ED8",
-		"hover": "#191919",
-		"active": "#0000e4",
-		"error": "#e74c3c",
-		"success": "#10B981",
-		"muted": "#6B7280"
+		"link": "#3B82F6",
+		"hover": "#1D4ED8",
+		"active": "#1E40AF",
+		"error": "#EF4444",
+		"success": "#22C55E",
+		"muted": "#94A3B8"
 	},
 	"typography": {
 		"fontFamily": "Inter",
