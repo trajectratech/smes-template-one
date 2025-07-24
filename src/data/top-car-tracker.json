@@ -5,7 +5,7 @@
 		"tagline": "Smart Security. Total Control. Enhanced Fleet Performance.",
 		"description": "Top Car Tracker Nigeria offers GPS vehicle tracking, fleet management, dashboard camera installation, fuel sensors, and car security solutions.",
 		"logoImage": "/top-car-tracker/topcartracker.webp",
-		"url": "https://smes-1.trajectra.com",
+		"url": "https://topcartracker.com",
 		"publicDirectory": "/top-car-tracker",
 		"keywords": [
 			"vehicle tracking",
@@ -87,6 +87,10 @@
 		{
 			"name": "X",
 			"url": "https://x.com/topcartrackerng"
+		},
+		{
+			"name": "Tiktok",
+			"url": "https://tiktok.com/topcartrackerng"
 		}
 	],
 	"content": {
@@ -94,12 +98,13 @@
 			"heading": "Real-time Car Tracking and Fleet security, Our GPS Services are Top-notch and 100% Reliable.",
 			"paragraph": "Top Car Tracker helps you monitor and secure your vehicles with ease.",
 			"ctaText": "Get Started",
-			"ctaUrl": "https://wa.me/2349010544454?text=Welcome%20to%20Top%20Car%20Tracker!%0A%0AWe're%20glad%20you're%20here.%20Our%20GPS%20services%20are%20top%0Anotch%20%26%20100%25%20reliable.%0A%0AWe%20also%20offer%3A%0A%0A%E2%80%A2%20Dashcam%0A%E2%80%A2%20Glass%20Fortification%0A%E2%80%A2%20Modifications%0A%0ASave%20our%20contact%20for%20quick%20support."
+			"ctaUrl": "https://wa.me/2349010544454?text=Hi,%0A%20I'd%20Love%20To%20Make%20Few%20Enquires%20On%20Car%20Tracking%20Installation."
 		},
 		"aboutSection": {
 			"heading": "About Us",
 			"paragraph": "Top Car Tracker NG provides reliable GPS vehicle tracking, fleet management, dashboard camera installation, glass modifications and fortifications and 24/7 monitoring solutions to improve safety and efficiency.",
-			"imageUrl": "https://images.unsplash.com/photo-1699391679400-faff80dd26f5?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+			"hasLottie": true,
+			"lottiePath": "/top-car-tracker/lottie/map-pin.json"
 		},
 		"servicesSection": {
 			"heading": "Our Services",
