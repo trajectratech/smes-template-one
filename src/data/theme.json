@@ -62,8 +62,7 @@
 		"logoImage": "/top-car-tracker/top-car-tracker.webp",
 		"heroTextColor": "var(--color-background)",
 		"heroHasLottie": true,
-		"lottiePath": "/top-car-tracker/lottie/map-pin-2.json",
-		"lottiePath2": "/top-car-tracker/lottie/map-pin.json"
+		"lottiePath": "/top-car-tracker/lottie/map-pin-2.json"
 	},
 	"logo": {
 		"dimensions": {
@@ -103,7 +102,9 @@
 		},
 		"aboutSection": {
 			"heading": "About Us",
-			"paragraph": "Top Car Tracker NG provides reliable GPS vehicle tracking, fleet management, dashboard camera installation, glass modifications and fortifications and 24/7 monitoring solutions to improve safety and efficiency."
+			"paragraph": "Top Car Tracker NG provides reliable GPS vehicle tracking, fleet management, dashboard camera installation, glass modifications and fortifications and 24/7 monitoring solutions to improve safety and efficiency.",
+			"hasLottie": true,
+			"lottiePath": "/top-car-tracker/lottie/map-pin.json"
 		},
 		"servicesSection": {
 			"heading": "Our Services",

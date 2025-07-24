@@ -61,7 +61,6 @@ export interface ThemeConfig {
 		heroTextColor?: string;
 		heroHasLottie?: boolean;
 		lottiePath?: string;
-		lottiePath2?: string;
 		logoImage: string;
 		galleryTitle?: string;
 		gallery?: { imageUrl: string; alt?: string; caption?: string }[];
@@ -91,6 +90,8 @@ export interface ThemeConfig {
 			heading: string;
 			paragraph: string;
 			imageUrl?: string;
+			hasLottie?: boolean;
+			lottiePath?: string;
 		};
 		servicesSection: {
 			heading: string;

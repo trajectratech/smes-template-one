@@ -15,8 +15,8 @@ const hasAboutContent =
 	content?.paragraph?.trim() ||
 	content?.imageUrl?.trim();
 
-const heroHasLottie = data.imagery.heroHasLottie;
-const heroLottie = data?.imagery?.lottiePath2;
+const hasLottie = content.hasLottie;
+const lottie = content.lottiePath;
 ---
 
 {
@@ -103,10 +103,10 @@ const heroLottie = data?.imagery?.lottiePath2;
 					</div>
 				)}
 
-				{!content?.imageUrl && heroHasLottie && heroLottie && (
+				{!content?.imageUrl && hasLottie && lottie && (
 					<div class="w-full md:w-1/2 h-[300px] md:h-[500px]">
 						<lottie-player
-							src={heroLottie}
+							src={lottie}
 							background="transparent"
 							speed="1"
 							loop
