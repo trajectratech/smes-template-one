@@ -185,7 +185,7 @@
 			]
 		},
 		"promoBanner": {
-			"message": "🚀 Limited Offer: Launch Your Business Website in 24hrs – Only ₦60,000!",
+			"message": "🚀 Limited Offer: Launch Your Business Website in 24hrs – Only ₦70,000!",
 			"ctaText": "Claim This Offer",
 			"ctaUrl": "https://wa.me/2349082906878?text=Hi%2C%20I%E2%80%99m%20interested%20in%20getting%20a%20website%20for%20my%20business.%20Please%20share%20more%20details%20about%20how%20it%20works.",
 			"expiresAt": "2025-08-15T23:59:59Z",
@@ -195,22 +195,28 @@
 	"pricing": [
 		{
 			"plan": "Starter",
-			"price": "₦60,000",
+			"price": "₦70,000",
 			"features": [
 				"1 Page Website",
 				"Custom Domain",
 				"Business Email",
 				"Google Visibility"
-			]
+			],
+			"showPricing": true
 		},
 		{
 			"plan": "Pro",
 			"price": "₦100,000",
-			"features": ["All Starter Features", "Product Listing", "Basic Analytics"]
+			"features": [
+				"All Starter Features",
+				"Product Listing",
+				"Basic Analytics"
+			],
+			"showPricing": true
 		},
 		{
 			"plan": "Custom",
-			"price": "From ₦150,000",
+			"price": "From ₦200,000",
 			"features": [
 				"Custom Features Extension",
 				"Advanced Design",
@@ -218,7 +224,8 @@
 				"Performance Optimization",
 				"Priority Support",
 				"Admin Dashboard"
-			]
+			],
+			"showPricing": true
 		}
 	],
 	"contact": {
