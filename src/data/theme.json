@@ -1,43 +1,42 @@
 {
 	"brand": {
-		"title": "Launch Online with Trajectra",
-		"businessName": "Trajectra Technologies Ltd",
-		"tagline": "Your Business. Online. In 24 Hours.",
-		"description": "Get a professional, blazing-fast, SEO-ready business website launched in just one day. Brought to you by Trajectra Technologies Ltd.",
-		"logoImage": "/trajectra/trajectra-closeup.svg",
-		"url": "https://launch.trajectra.com",
+		"title": "TrackSure - Fleet Management, GPS, Vehicle Tracking and Security",
+		"businessName": "TrackSure",
+		"tagline": "Real-time vehicle tracking and fleet security",
+		"description": "Real-time vehicle tracking and fleet security",
+		"logoImage": "/tracksure/tracksure.webp",
+		"url": "https://smes-1.trajectra.com",
+		"publicDirectory": "/tracksure",
 		"keywords": [
-			"website for business",
-			"instant website",
-			"SEO business page",
-			"buy business domain",
-			"online store",
-			"trajectra"
-		],
-		"publicDirectory": "/trajectra"
+			"vehicle tracking",
+			"GPS",
+			"fleet management",
+			"security",
+			"TrackSure"
+		]
 	},
 	"colors": {
-		"primary": "#34C759",
-		"secondary": "#0B3D20",
-		"accent": "#2ECC71",
-		"background": "#FFFFFF",
-		"text": "#1C1C1E",
-		"heading": "#0B3D20",
-		"link": "#34C759",
-		"hover": "#28A745",
-		"active": "#10752F",
-		"error": "#FF3B30",
-		"success": "#34C759",
-		"muted": "#A1A1A1"
+		"primary": "#0F172A",
+		"secondary": "#3B82F6",
+		"accent": "#1E40AF",
+		"background": "#F9FAFB",
+		"text": "#111827",
+		"heading": "#0F172A",
+		"link": "#1D4ED8",
+		"hover": "#2563EB",
+		"active": "#1E3A8A",
+		"error": "#e74c3c",
+		"success": "#10B981",
+		"muted": "#D1D5DB"
 	},
 	"typography": {
-		"fontFamily": "Inter, sans-serif",
+		"fontFamily": "Ubuntu",
 		"fontSizes": {
-			"h1": "2.5rem",
-			"h2": "2rem",
-			"h3": "1.5rem",
-			"paragraph": "1rem",
-			"caption": "0.875rem"
+			"h1": "36px",
+			"h2": "30px",
+			"h3": "24px",
+			"paragraph": "16px",
+			"caption": "14px"
 		},
 		"fontStyles": {
 			"bold": "bold",
@@ -53,248 +52,215 @@
 		}
 	},
 	"imagery": {
-		"logoImage": "/trajectra/trajectra-closeup.svg",
-		"galleryTitle": "Recent Launches",
-		"gallery": []
+		"backgroundImage": "",
+		"logoImage": "/tracksure/tracksure.png",
+		"heroImage": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1283&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"heroTextColor": "var(--color-background)",
+		"galleryTitle": "On-Site Showcase",
+		"gallery": [
+			{
+				"imageUrl": "https://images.unsplash.com/photo-1634743556192-d19f0c69ff3a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+				"caption": "Tracking dashboard"
+			},
+			{
+				"imageUrl": "https://images.unsplash.com/photo-1699391679400-faff80dd26f5?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+			},
+			{
+				"imageUrl": "https://images.unsplash.com/photo-1590602562997-1234de679f76?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+			},
+			{
+				"imageUrl": "https://images.unsplash.com/photo-1610647752706-3bb12232b3ab?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+			}
+		]
 	},
+	"logo": {
+		"dimensions": {
+			"width": 100,
+			"height": 50
+		},
+		"padding": 10,
+		"margin": 20
+	},
+
+	"googleBusinessProfileLink": "",
+
 	"socialMedia": [
 		{
-			"name": "facebook",
-			"url": "https://web.facebook.com/people/Trajectra/61575689502633/"
+			"name": "Instagram",
+			"url": "https://instagram.com/tracksure"
 		},
-		{ "name": "x", "url": "https://x.com/trajectra" },
-		{ "name": "linkedin", "url": "https://linkedin.com/company/trajectra" },
-		{ "name": "youtube", "url": "https://youtube.com/@trajectra" },
-		{ "name": "instagram", "url": "https://instagram.com/trajectra" }
+		{
+			"name": "Facebook",
+			"url": "https://facebook.com/tracksure"
+		},
+		{
+			"name": "X",
+			"url": "https://x.com/tracksure"
+		},
+		{
+			"name": "Youtube",
+			"url": "https://youtube.com/tracksure"
+		}
 	],
 	"content": {
 		"heroSection": {
-			"heading": "Launch Your Business Online in 24 Hours",
-			"paragraph": "No coding. No delays. Just a clean, professional business page with your products, contact, and brand — live within a day.",
-			"ctaText": "Launch Now",
-			"ctaUrl": "https://wa.me/2349082906878?text=Hi%2C%20I%E2%80%99m%20interested%20in%20getting%20a%20website%20for%20my%20business.%20Please%20share%20more%20details%20about%20how%20it%20works."
+			"heading": "Real-time vehicle tracking and fleet security",
+			"paragraph": "TrackSure helps you monitor and secure your vehicles with ease.",
+			"ctaText": "Request a Demo",
+			"ctaUrl": "https://tracksure.com/request-demo"
 		},
 		"aboutSection": {
-			"heading": "Who We Are",
-			"paragraph": "We’re a Nigerian software company helping small businesses build an online presence quickly. With years of experience in custom software, consulting, and training, Trajectra delivers practical, effective solutions that work."
+			"heading": "About TrackSure",
+			"paragraph": "TrackSure provides reliable GPS vehicle tracking, fleet management, and 24/7 monitoring solutions to improve safety and efficiency.",
+			"imageUrl": "https://images.unsplash.com/photo-1699391679400-faff80dd26f5?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 		},
 		"servicesSection": {
-			"heading": "What You Get",
-			"paragraph": "Everything your business needs to go online fast.",
+			"heading": "Our Services",
+			"paragraph": "Explore our comprehensive solutions for fleet and vehicle management.",
 			"listItems": [
-				{ "title": "SEO-Ready Business Website" },
-				{ "title": "Custom Domain & Email Setup" },
-				{ "title": "Product Listing & Payment Integration" },
-				{ "title": "Visible on Google Search" },
-				{ "title": "Fast, Secure, Mobile Responsive" }
+				{ "title": "GPS Vehicle Tracking", "description": "" },
+				{ "title": "Fleet Management", "description": "" },
+				{ "title": "Real-time Alerts & Reports", "description": "" },
+				{ "title": "Geofencing", "description": "" },
+				{ "title": "24/7 Monitoring", "description": "" }
 			]
 		},
-		"howItWorksSection": {
-			"heading": "How It Works",
-			"steps": [
+		"testimonialsSection": {
+			"heading": "What Our Cleints Say",
+			"testimonials": [
 				{
-					"title": "Step 1: Fill a Simple Form",
-					"description": "Tell us about your business, upload your logo and content."
+					"name": "Adewale O.",
+					"position": "Fleet Manager, Lagos Haulage Co.",
+					"comment": "TrackSure helped us reduce vehicle theft and improve route planning. Highly recommended!",
+					"rating": 5,
+					"avatarUrl": ""
 				},
 				{
-					"title": "Step 2: We Build It",
-					"description": "Our tool generates your website with SEO best practices."
-				},
-				{
-					"title": "Step 3: You're Live!",
-					"description": "We deploy your new website and send you the link, domain, and login."
+					"name": "Ngozi K.",
+					"position": "Business Owner",
+					"comment": "I can now monitor all my delivery vehicles from my phone. It's reliable and efficient.",
+					"rating": 4,
+					"avatarUrl": ""
 				}
-			]
-		},
-		"targetAudienceSection": {
-			"heading": "Perfect For",
-			"audienceList": [
-				{ "title": "Retail & Shops" },
-				{ "title": "Beauty & Wellness" },
-				{ "title": "Tech Startups" },
-				{ "title": "Training Centres" },
-				{ "title": "Freelancers" },
-				{ "title": "Local Services" }
-			]
-		},
-
-		"ctaSection": {
-			"heading": "Ready to Launch?",
-			"subheading": "Let us help you go from offline to online — instantly.",
-			"ctaText": "Launch Now",
-			"ctaUrl": "https://wa.me/2349082906878?text=Hi%2C%20I%E2%80%99m%20interested%20in%20getting%20a%20website%20for%20my%20business.%20Please%20share%20more%20details%20about%20how%20it%20works.",
-			"backgroundColor": "#34C759"
-		},
-		"trustSection": {
-			"heading": "Why Trust Us?",
-			"trustBadges": [],
-			"guarantees": [
-				"Satisfaction Guarantee",
-				"Fully Responsive",
-				"Affordable Pricing"
-			],
-			"stats": [
-				{ "label": "Websites Delivered", "value": "100+" },
-				{ "label": "Avg. Build Time", "value": "12 hrs" }
 			]
 		},
 		"faqsSection": {
-			"heading": "FAQs",
+			"heading": "FAQS",
 			"faqs": [
 				{
-					"question": "Can I edit my website later?",
-					"answer": "Yes, you get access to make content updates yourself without needing to code."
+					"question": "How do I install the GPS tracker?",
+					"answer": "Our technicians can assist with installation, or you can follow the manual provided with the device."
 				},
 				{
-					"question": "Can I sell products?",
-					"answer": "Yes, your website can include product listings and secure payments."
+					"question": "Can I track multiple vehicles?",
+					"answer": "Yes, our Pro and Enterprise plans support fleet tracking for multiple vehicles."
 				},
 				{
-					"question": "What if I don’t have a logo?",
-					"answer": "We’ll provide a professional placeholder or help you design a simple logo."
-				},
-				{
-					"question": "How long does it take to get my website?",
-					"answer": "Most websites are delivered within 2-3 working days after content submission."
-				},
-				{
-					"question": "Do I need a domain and hosting?",
-					"answer": "No worries—we can provide a free subdomain or help you set up your own custom domain."
-				},
-				{
-					"question": "Is my website mobile-friendly?",
-					"answer": "Absolutely. All our websites are responsive and optimized for phones and tablets."
-				},
-
-				{
-					"question": "Will my site show on Google?",
-					"answer": "Yes, we implement SEO best practices so your site can rank on search engines."
-				},
-				{
-					"question": "Is there a monthly fee?",
-					"answer": "No hidden fees. You only pay once, unless you choose a plan with ongoing support or hosting."
-				},
-				{
-					"question": "Can I use my own colors and fonts?",
-					"answer": "Yes, we’ll customize the design to match your brand colors and preferred style."
-				},
-				{
-					"question": "I’m not tech-savvy. Will I get support?",
-					"answer": "Definitely. We offer clear guidance and support even after your site is launched."
+					"question": "How do I place an order?",
+					"answer": "Click the 'Order on WhatsApp' button under the product you're interested in and send us a message."
 				}
 			]
-		},
-		"promoBanner": {
-			"message": "🚀 Limited Offer: Launch Your Business Website in 24hrs – Only ₦70,000!",
-			"ctaText": "Claim This Offer",
-			"ctaUrl": "https://wa.me/2349082906878?text=Hi%2C%20I%E2%80%99m%20interested%20in%20getting%20a%20website%20for%20my%20business.%20Please%20share%20more%20details%20about%20how%20it%20works.",
-			"expiresAt": "2025-08-15T23:59:59Z",
-			"enableCountdown": true
 		}
 	},
 	"pricing": [
 		{
-			"plan": "Starter",
-			"price": "₦70,000",
-			"features": [
-				"1 Page Website",
-				"Custom Domain",
-				"Business Email",
-				"Google Visibility"
-			],
-			"showPricing": true
+			"plan": "Basic Plan",
+			"price": "₦10,000/month",
+			"features": ["Real-time GPS tracking", "1 Vehicle", "SMS Alerts"]
 		},
 		{
-			"plan": "Pro",
-			"price": "₦100,000",
+			"plan": "Pro Plan",
+			"price": "₦25,000/month",
 			"features": [
-				"All Starter Features",
-				"Product Listing",
-				"Basic Analytics"
-			],
-			"showPricing": true
+				"Fleet Management (Up to 5 vehicles)",
+				"Geofencing",
+				"Email + SMS Alerts",
+				"Reports Dashboard"
+			]
 		},
 		{
-			"plan": "Custom",
-			"price": "From ₦200,000",
+			"plan": "Enterprise Plan",
+			"price": "Custom Pricing",
 			"features": [
-				"Custom Features Extension",
-				"Advanced Design",
-				"Ongoing Maintenance",
-				"Performance Optimization",
+				"Unlimited Vehicles",
+				"API Access",
 				"Priority Support",
-				"Admin Dashboard"
-			],
-			"showPricing": true
+				"Custom Integrations"
+			]
 		}
 	],
+	"map": {
+		"embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252168.8803518341!2d7.204291786718748!3d9.051105600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b36c37f0a37%3A0xc006d8db832580ea!2sCentral%20Bank%20of%20Nigeria!5e0!3m2!1sen!2sng!4v1752843098143!5m2!1sen!2sng"
+	},
 	"contact": {
-		"email": "info@trajectra.com",
+		"email": "support@tracksure.com",
 		"phone": "+2347066120776",
 		"whatsapp": "+2347066120776",
-		"address": "9b, Ewusu Otaiku Street, Alapere, Ketu, Lagos, Nigeria",
-		"addressLocality": "Lagos",
-		"addressRegion": "Lagos",
-		"addressCountry": "NG"
+		"address": "Abuja, Nigeria",
+		"addressLocality": "Abuja",
+		"addressRegion": "Abuja",
+		"addressCountry": "NG",
+		"geoData": {
+			"latitude": 9.051106,
+			"longitude": 7.204292
+		}
 	},
 	"layout": {
 		"sectionOrder": [
 			"heroSection",
-			"promoLiveBanner",
-			"ctaSection",
-			"servicesSection",
-			"demoShowcaseSection",
-			"trustSection",
-			"howItWorksSection",
-			"targetAudienceSection",
+			"testimonialsSection",
+			"aboutSection",
+			"gallerySection",
 			"pricingSection",
 			"faqsSection",
-			"aboutSection"
+			"contactSection"
 		],
-		"sectionPadding": 48,
+		"sectionPadding": 50,
 		"containerWidth": 1200,
-		"containerPadding": 24
+		"containerPadding": 20
 	},
-	"settings": {
-		"darkMode": false,
-		"showBooking": false,
-		"showPricing": true,
-		"isSeller": true
+	"interactions": {
+		"animationStyles": {
+			"fade": "fadeIn 1s ease-in-out"
+		},
+		"transitionEffects": {
+			"hover": "background-color 0.3s ease-in-out, color 0.3s ease-in-out"
+		}
 	},
-	"ecommerce": {
-		"currency": "NGN",
-		"allowCart": false,
-		"paymentProviders": ["Paystack"]
-	},
-	"seo": {
-		"pageTitle": "Launch Your Business Online | Trajectra",
-		"metaDescription": "Launch a business website in 24hrs with Trajectra. SEO-ready, fast, responsive, and includes custom domain & email setup.",
-		"structuredData": {
-			"type": "LocalBusiness",
-			"schemaJson": {
-				"@context": "https://schema.org",
-				"@type": "LocalBusiness",
-				"name": "Trajectra Technologies Ltd",
-				"url": "https://trajectra.com",
-				"logo": "/trajectra/trajectra-closeup.svg",
-				"address": {
-					"streetAddress": "9b, Ewusu Otaiku Street, Alapere, Ketu, Lagos, Nigeria",
-					"addressLocality": "Lagos",
-					"addressRegion": "Lagos",
-					"postalCode": "100001",
-					"addressCountry": "NG"
-				},
-				"contactPoint": {
-					"@type": "ContactPoint",
-					"telephone": "+2347066120776",
-					"contactType": "Customer Support"
-				}
+	"components": {
+		"buttonStyles": {
+			"backgroundColor": "#0F172A",
+			"textColor": "#ffffff",
+			"padding": 12,
+			"borderRadius": 6
+		},
+		"formStyles": {
+			"inputFieldStyles": {
+				"padding": 10,
+				"border": "1px solid #D1D5DB",
+				"borderRadius": 4
 			}
 		}
 	},
+	"responsiveness": {
+		"breakpoints": {
+			"desktop": 1200,
+			"tablet": 768,
+			"mobile": 480
+		}
+	},
+	"seo": {
+		"pageTitle": "TrackSure - Fleet Management, GPS, Vehicle Tracking and Security",
+		"metaDescription": "TrackSure - Fleet Management, GPS, Vehicle Tracking and Security"
+	},
+	"settings": {
+		"darkMode": true,
+		"showBooking": true,
+		"showPricing": true
+	},
 	"poweredBy": {
 		"title": "Trajectra Technologies",
-		"url": "https://trajectra.com",
-		"shouldShow": false
+		"url": "https://www.trajectra.com",
+		"shouldShow": true
 	}
 }
